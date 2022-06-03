@@ -1,5 +1,5 @@
 # Disclose
-Frontend Repo ![frontend_repo](https://github.com/JCollinJones25/disclose-frontend)
+Frontend Repo - [here](https://github.com/JCollinJones25/disclose-frontend)
 
 ## Scope
 Django Backend, React Frontend, Third party API call to Google Maps
