@@ -15,9 +15,14 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from main_app.views import front
+from rest_framework import routers
+from main_app import views
+# from main_app.views import front, location, location_detail
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path("", front, name="front"),
+    path("", views.Home.as_view(), name="home"),
+    # path("", front, name="front"),
+    # path("locations/", location, name="location"),
+    # path("locations/<int:pk>/", location_detail, name="detail"),
 ]
