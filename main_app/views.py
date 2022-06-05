@@ -12,4 +12,6 @@ from rest_framework import status
 class Home(TemplateView):
     template_name = 'base.html'
 
- 
+class Location(TemplateView):
+    model = Location
+    template_name = 'location_detail.html'
