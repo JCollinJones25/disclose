@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+ <h1>Location list </h1>
+ <hr>
+ <div class="locations">
+     {% for location in Locations %}
+     <h2>{{location.Name}}</h2>
+     <img src='{{location.img}}' alt="'{{location.name}}"/>
+     {% endfor %}
+</div>
+{% endblock %}
