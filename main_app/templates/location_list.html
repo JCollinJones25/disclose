@@ -8,9 +8,10 @@ Dislose
  <div class="locations">
      {% for location in locations %}
      <a href="/locations/{{location.id}}">
-         <h2>{{location.name}}</h2>
+         <h2>{{location.name}} - {{location.city}}, {{location.state}}</h2>
          <img src='{{location.img}}' alt="'{{location.name}}"/>
         </a>
+        <hr>
      {% endfor %}
 </div>
 {% endblock %}

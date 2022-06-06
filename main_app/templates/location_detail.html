@@ -3,15 +3,17 @@
 {{location.name}}
 {% endblock %}
 {% block content %}
-<div class="locations">
-     <h1>Location detail </h1>
-     <h1>{{location.name}}</h1>
-     <h1>{{location.city}}</h1>
-     <h1>{{location.state}}</h1>
-     <h1>{{location.description}}</h1>
-     <h1>{{location.lat}}</h1>
-     <h1>{{location.lng}}</h1>
-     <img src='{{location.img}}' alt='{{location.name}}'/>
+<div class="location-detail">
+    <div class="location-text">
+        <h1>{{location.name}}</h1>
+        <h2>{{location.city}}, {{location.state}}</h2>
+        <p>{{location.description}}</p>
+        <h3>Lat: {{location.lat}}</h3>
+        <h3>Long: {{location.lng}}</h3>
+    </div>
+    <div class="location-img">
+        <img src='{{location.img}}' alt='{{location.name}}'/>
+    </div>
 </div>
 <div class="buttons">
     <a href="/locations/{{location.id}}/update">
