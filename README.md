@@ -1,6 +1,6 @@
 # Disclose
-Frontend Repo - [here](https://github.com/JCollinJones25/disclose-react)
-Google Maps API - [https://developers.google.com/maps/documentation/javascript/](https://developers.google.com/maps/documentation/javascript/)
+- Frontend Repo - [here](https://github.com/JCollinJones25/disclose-react)
+- Google Maps API - [https://developers.google.com/maps/documentation/javascript/](https://developers.google.com/maps/documentation/javascript/)
 
 ## Technologies Used
 Django, PostgreSQL, Google Maps API
