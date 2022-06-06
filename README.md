@@ -18,4 +18,4 @@ Disclose is a social media type of platform that caters to the 'urban explorer' 
 
 
 ## Component Hierarchy
-![component hierarchy](https://github.com/JCollinJones25/disclose/blob/main/images/component_hierarchy.png?raw=true)
+![component hierarchy](https://github.com/JCollinJones25/disclose/blob/main/images/comp_hierarchy.png?raw=true)
