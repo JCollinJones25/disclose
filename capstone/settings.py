@@ -135,3 +135,6 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 GOOGLE_API_KEY='AIzaSyDuT4b_LFmOXzixvjt9gR3z4xH5f8U6UoE'
+
+LOGIN_REDIRECT_URL = '/'
+LOGOUT_REDIRECT_URL = '/'

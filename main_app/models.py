@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -14,8 +15,10 @@ class Location(models.Model):
     img2 = models.CharField(max_length=700, default="https://us.123rf.com/450wm/pavelstasevich/pavelstasevich1811/pavelstasevich181101028/112815904-no-image-available-icon-flat-vector-illustration.jpg?ver=6" )
     img3 = models.CharField(max_length=700, default="https://us.123rf.com/450wm/pavelstasevich/pavelstasevich1811/pavelstasevich181101028/112815904-no-image-available-icon-flat-vector-illustration.jpg?ver=6")
     img4 = models.CharField(max_length=700, default="https://us.123rf.com/450wm/pavelstasevich/pavelstasevich1811/pavelstasevich181101028/112815904-no-image-available-icon-flat-vector-illustration.jpg?ver=6")
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     
-
+    def __str__(self):
+        return self.name
 
     def __str__(self):
         return self.name
