@@ -14,15 +14,15 @@
      <img src='{{location.img}}' alt='{{location.name}}'/>
 </div>
 <div class="buttons">
-    <div class='green'>
-        <a href="/locations/{{location.id}}/update">
-            <p>Edit</p>
+    <a href="/locations/{{location.id}}/update">
+        <div class='green'>
+            Edit
         </div>
     </a>
-    <div class='red'>
-        <a href="/locations/{{location.id}}/delete">
-            <p>Delete</p>
-        </a>
-    </div>
+    <a href="/locations/{{location.id}}/delete">
+        <div class='red'>
+            Delete
+        </div>
+    </a>
 </div>
 {% endblock %}

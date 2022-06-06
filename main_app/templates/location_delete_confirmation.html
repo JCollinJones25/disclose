@@ -4,13 +4,12 @@
 <form method="post">
     {% csrf_token %}
     <div class="buttons">
-        <div class="green">
-
-            <input type="submit" value="Yes"/>
-        </div>
-        <div class="red">
-            <a href="{% url 'location_detail' location.pk %}">No</a>
-        </div>
+        <input class="green-submit" type="submit" value="Yes"/>
+        <a href="{% url 'location_detail' location.pk %}">
+            <div class="red">
+                No
+            </div>
+        </a>
     </div>
     </form>
 {% endblock %}

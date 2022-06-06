@@ -17,10 +17,16 @@ body {
     background-color: rgb(65, 54, 142);
 }
 
-a {
+nav a {
     color: green;
     text-decoration: none;
 }
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
 
 nav {
     display: flex;
@@ -31,10 +37,14 @@ nav {
     display: flex;
     flex-direction: row;
     justify-content: center;
+    justify-content: space-evenly;
     font-size: 12px;
+    max-width: 25%;
+    margin: auto;
+    margin-top: 30px;
 }
 
-.green {
+.green-submit {
     display: flex;
     border-radius: 25%;
     width: 75px;
@@ -43,19 +53,34 @@ nav {
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin: 25px;
     padding: 5px;
+    color: white;
+    border-color: white;
 }
 
 .red {
     display: flex;
     border-radius: 25%;
-    width: 75px;
-    height: 50px;
+    width: 65px;
+    height: 40px;
     background-color: rgb(237, 85, 85);
     text-align: center;
     align-items: center;
     justify-content: center;
-    margin: 25px;
     padding: 5px;
+    border: solid;
+
+}
+
+.green {
+    display: flex;
+    border-radius: 25%;
+    width: 65px;
+    height: 40px;
+    background-color: rgb(83, 212, 83);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: solid;
 }
