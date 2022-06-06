@@ -1,4 +1,5 @@
-console.log("hello world from app.js");
+console.log("hello world from index.js");
+
 
 function initMap() {
   const options = {
@@ -10,4 +11,5 @@ function initMap() {
   };
   const map = new google.maps.Map(document.getElementById("map"), options);
 }
-initMap();
+
+window.initMap = initMap;
