@@ -14,5 +14,15 @@
 }
 
 body {
-    background-color: slateblue;
+    background-color: rgb(65, 54, 142);
+}
+
+a {
+    color: green;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    justify-content: space-evenly;
 }

@@ -1,5 +1,8 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
+from django.views.generic.edit import CreateView
+from django.urls import reverse
+from django.shortcuts import redirect, render
 from .serializers import LocationSerializer
 from .models import Location
 from rest_framework.decorators import api_view
@@ -13,8 +16,7 @@ from rest_framework import status
 class Home(TemplateView):
     template_name = 'home.html'
 
-class Location(TemplateView):
-    model = Location
+class LocationList(TemplateView):
     template_name = 'location_list.html'
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
@@ -25,3 +27,9 @@ class LocationDetail(TemplateView):
     model = Location
     template_name = 'location_detail.html'
 
+class LocationCreate(CreateView):
+    model = Location
+    fields = ['name', 'city', 'state', 'img', 'description', 'lat', 'lng']
+    template_name = 'location_create.html'
+    def get_success_url(self):
+        return reverse('location_detail', kwargs={'pk': self.object.pk})
