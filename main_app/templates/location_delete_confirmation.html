@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>Are you sure you want to delete {{location.name}}</h1>
+<form method="post">
+    {% csrf_token %}
+    <div class="buttons">
+        <div class="green">
+
+            <input type="submit" value="Yes"/>
+        </div>
+        <div class="red">
+            <a href="{% url 'location_detail' location.pk %}">No</a>
+        </div>
+    </div>
+    </form>
+{% endblock %}

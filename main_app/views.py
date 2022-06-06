@@ -41,3 +41,8 @@ class LocationUpdate(UpdateView):
     template_name = 'location_update.html'
     def get_success_url(self):
         return reverse('location_detail', kwargs={'pk': self.object.pk})
+
+class LocationDelete(DeleteView):
+    model = Location
+    template_name = 'location_delete_confirmation.html'
+    success_url = '/locations/'
