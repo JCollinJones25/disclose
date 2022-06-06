@@ -4,7 +4,7 @@ Dislose
 {% endblock %}
 {% block content %}
 <div class="list-top">
-    <h1>Locations</h1>
+    <h1>Directory</h1>
     <div class="add-new-container">
         <form action="{% url 'location_create' %}">
             <input class='add-new' type="submit" value="+"/>
@@ -14,11 +14,15 @@ Dislose
  <hr>
  <div class="locations">
      {% for location in locations %}
-     <a href="/locations/{{location.id}}">
-         <h2>{{location.name}} - {{location.city}}, {{location.state}}</h2>
-         <img src='{{location.img}}' alt="'{{location.name}}"/>
+        <a href="/locations/{{location.id}}">
+            <div class="list-item">
+                <h2>{{location.name}} - {{location.city}}, {{location.state}}</h2>
+                <div class="list-img-container">
+                    <img class="list-img" src='{{location.img}}' alt="'{{location.name}}"/>
+                </div>
+            </div>
         </a>
-        <hr>
+    <hr>
      {% endfor %}
 </div>
 {% endblock %}
