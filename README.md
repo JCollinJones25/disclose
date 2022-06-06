@@ -14,7 +14,7 @@ Disclose is a social media type of platform that caters to the 'urban explorer' 
 
 
 ## ERD
-![ERD](https://github.com/JCollinJones25/disclose/blob/main/images/ERD.png)?raw=true)
+![ERD](https://github.com/JCollinJones25/disclose/blob/main/images/ERD.png?raw=true)
 
 
 ## Component Hierarchy
