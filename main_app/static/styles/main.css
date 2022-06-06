@@ -16,7 +16,8 @@
 }
 
 body {
-    background-color: rgb(65, 54, 142);
+    background-color: black;
+    color: green;
 }
 
 nav a {
@@ -190,4 +191,52 @@ nav {
     height: 60%;
     object-fit: cover;
     
+}
+
+.auth {
+    width: 40%;
+    height: 55px;
+    border-left: solid;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.navbar-menu .navbar-end {
+    flex-direction: row;
+    margin-right: 5px;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar-item {
+    margin: 10px;
+}
+
+.login-page {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.login-img {
+    z-index: -1;
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+    object-fit: cover;
+}
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    border-radius: 25%;
+    border-color: green;
+    margin: auto;
+    padding: 5%;
+    z-index: 1;
+    width: 35%;
+    height: 20%;
 }

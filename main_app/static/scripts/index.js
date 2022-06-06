@@ -1,7 +1,7 @@
 console.log("hello world from index.js");
 
 
-function initMap() {
+async function initMap() {
   const options = {
     zoom: 4,
     center: {
@@ -9,7 +9,7 @@ function initMap() {
       lng: -77.8583,
     },
   };
-  const map = new google.maps.Map(document.getElementById("map"), options);
+  const map = await new google.maps.Map(document.getElementById("map"), options);
 }
 
 window.initMap = initMap;
