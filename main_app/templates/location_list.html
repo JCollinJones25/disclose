@@ -3,7 +3,14 @@
 Dislose
 {% endblock %}
 {% block content %}
- <h1>Location list </h1>
+<div class="list-top">
+    <h1>Locations</h1>
+    <div class="add-new-container">
+        <form action="{% url 'location_create' %}">
+            <input class='add-new' type="submit" value="+"/>
+        </form>
+    </div>
+</div>
  <hr>
  <div class="locations">
      {% for location in locations %}

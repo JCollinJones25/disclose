@@ -5,12 +5,14 @@
     display: flex;
     margin: auto;
 }
+
 .map-container {
     height: 400px;
     width: 80%;
     display: flex;
     justify-content: center;
     margin: auto;
+    margin-top: 5%;
 }
 
 body {
@@ -27,10 +29,32 @@ a {
     text-decoration: none;
 }
 
-
 nav {
     display: flex;
     justify-content: space-evenly;
+}
+
+.list-top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.add-new-container {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.add-new {
+    display: flex;
+    border-radius: 25%;
+    width: 35px;
+    height: 35px;
+    background-color: rgb(83, 212, 83);
+    align-items: center;
+    justify-content: center;
+    margin: 25px;
+    color: white;
 }
 
 .buttons {
