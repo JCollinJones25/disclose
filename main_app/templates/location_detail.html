@@ -5,6 +5,12 @@
 {% block content %}
 <div class="locations">
      <h1>Location detail </h1>
-     <h1>{{location.Name}}</h1>
+     <h1>{{location.name}}</h1>
+     <h1>{{location.city}}</h1>
+     <h1>{{location.state}}</h1>
+     <h1>{{location.description}}</h1>
+     <h1>{{location.lat}}</h1>
+     <h1>{{location.lng}}</h1>
+     <img src='{{location.img}}' alt='{{location.name}}'/>
 </div>
 {% endblock %}

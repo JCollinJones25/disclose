@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
 from django.views.generic.edit import CreateView
+from django.views.generic import DetailView
 from django.urls import reverse
 from django.shortcuts import redirect, render
 from .serializers import LocationSerializer
@@ -23,7 +24,7 @@ class LocationList(TemplateView):
         context['locations'] = Location.objects.all()
         return context
     
-class LocationDetail(TemplateView):
+class LocationDetail(DetailView):
     model = Location
     template_name = 'location_detail.html'
 
