@@ -5,27 +5,32 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet"> 
     <link href="{% static '/styles/main.css'%}" rel='stylesheet' type='text/css'/>
     <title>{% block title %} {% endblock %}</title>
 </head>
 <body>
-    <nav>
-        <a href="{% url 'home' %}">Home</a>
-        <a href="{% url 'location_list' %}">Locations</a>
+    <div class="header">
+        <nav>
+            <a class="title" href="{% url 'home' %}">Disclose</a>
+            <a href="{% url 'location_list' %}">Locations</a>
+        </nav>
         <div class="auth">
-            {% if user.is_authenticated %}
-        <div class="navbar-menu navbar-end">
+          {% if user.is_authenticated %}
+          <div class="navbar-menu navbar-end">
             <span class="navbar-item">Welcome {{user.username}}</span>
             <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
-        </div>
-        {% else %}
-        <div class="navbar-menu navbar-end">
+          </div>
+          {% else %}
+          <div class="navbar-menu navbar-end">
             <a class="navbar-item" href="{% url 'login' %}">Login</a>
             <a class="navbar-item" href="{% url 'signup' %}">Sign Up</a>
+          </div>
+          {% endif %}
         </div>
-        {% endif %}
-    </div>
-    </nav>
+      </div>
     {% block content %} {% endblock %}
 </body>
 </html>

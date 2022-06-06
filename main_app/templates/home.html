@@ -2,6 +2,9 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
     <title>Disclose</title>
     <script src="../static/scripts/index.js" defer></script>
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
@@ -10,28 +13,34 @@
     <script type="module" src="../static/scripts/index.js"></script>
   </head>
   <body>
-    <nav>
-        <a href="{% url 'home' %}">Home</a>
+    <div class="header">
+      <nav>
+        <a class="title" href="{% url 'home' %}">Disclose</a>
         <a href="{% url 'location_list' %}">Locations</a>
-        <div class="auth">
-            {% if user.is_authenticated %}
+      </nav>
+      <div class="auth">
+        {% if user.is_authenticated %}
         <div class="navbar-menu navbar-end">
-            <span class="navbar-item">Welcome {{user.username}}</span>
-            <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
+          <span class="navbar-item">Welcome {{user.username}}</span>
+          <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
         </div>
         {% else %}
         <div class="navbar-menu navbar-end">
-            <a class="navbar-item" href="{% url 'login' %}">Login</a>
-            <a class="navbar-item" href="{% url 'signup' %}">Sign Up</a>
+          <a class="navbar-item" href="{% url 'login' %}">Login</a>
+          <a class="navbar-item" href="{% url 'signup' %}">Sign Up</a>
         </div>
         {% endif %}
+      </div>
     </div>
-    </nav>
-    <div class='map-container'>
-        <div id="map"></div>
+    <div class="map-container">
+      <div id="map"></div>
     </div>
-    
-    <script async="true" type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap"></script>
-        
+
+    <script
+      async
+      defer
+      type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap"
+    ></script>
   </body>
 </html>
