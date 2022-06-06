@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from django.views.generic.base import TemplateView
-from django.views.generic.edit import CreateView
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import DetailView
 from django.urls import reverse
 from django.shortcuts import redirect, render
@@ -32,5 +32,12 @@ class LocationCreate(CreateView):
     model = Location
     fields = ['name', 'city', 'state', 'img', 'description', 'lat', 'lng']
     template_name = 'location_create.html'
+    def get_success_url(self):
+        return reverse('location_detail', kwargs={'pk': self.object.pk})
+
+class LocationUpdate(UpdateView):
+    model = Location
+    fields = ['name', 'city', 'state', 'img', 'description', 'lat', 'lng']
+    template_name = 'location_update.html'
     def get_success_url(self):
         return reverse('location_detail', kwargs={'pk': self.object.pk})
