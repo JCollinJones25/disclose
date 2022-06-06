@@ -1,7 +1,8 @@
 console.log("hello world from index.js");
 
+// const URL = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_MAPS_API_KEY}`
 
-async function initMap() {
+function initMap() {
   const options = {
     zoom: 4,
     center: {
@@ -9,7 +10,7 @@ async function initMap() {
       lng: -77.8583,
     },
   };
-  const map = await new google.maps.Map(document.getElementById("map"), options);
+  const map = new google.maps.Map(document.getElementById("map"), options);
 }
 
 window.initMap = initMap;
