@@ -1,11 +1,12 @@
 # Disclose
 Frontend Repo - [here](https://github.com/JCollinJones25/disclose-react)
+Google Maps API - [https://developers.google.com/maps/documentation/javascript/](https://developers.google.com/maps/documentation/javascript/)
 
-## Scope
-Django Backend, React Frontend, Third party API call to Google Maps
+## Technologies Used
+Django, PostgreSQL, Google Maps API
 
-## User Stories / Overview
-'Disclose' is a social media type of platform that caters to the 'urban explorer' crowd. It will allows users to share interesting/hidden/abandoned/exploring worthy locations that are otherwise not well known or only shared by word of mouth. If you're traveling through an area you can check the app for what any cool spots are nearby that only the locals know about. My app will just use the Google Maps API for the map which allows you to drop pins. Users just have to drop a pin on the map and enter data about the location (name, img, description).
+## Description
+Disclose is a social media type of platform that caters to the 'urban explorer' crowd. It will allows users to share interesting/hidden/abandoned/exploring worthy locations that are otherwise not well known or only shared by word of mouth. If you're traveling through an area you can check the app for what any cool spots are nearby that only the locals know about. My app will just use the Google Maps API for the map which allows you to drop pins. Users just have to drop a pin on the map and enter data about the location (name, img, description).
 
 
 ## Wireframe
