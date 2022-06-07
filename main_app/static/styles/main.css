@@ -26,7 +26,6 @@ a {
     text-decoration: none;
 }
 
-
 .locations {
     padding: 20px;
 }
@@ -229,16 +228,23 @@ nav {
 
 .login-page {
     display: flex;
-    justify-content: center;
-    margin: auto;
-}
+    justify-content: right;
+    margin: auto; 
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+} 
 
 .login-img {
     z-index: -1;
     max-width: 100%;
-    max-height: 100%;
+    max-height: 90%;
+    display: flex;
+    justify-content: center;
     margin: auto;
     object-fit: cover;
+    overflow: hidden;
+    position: absolute;
 }
 
 .login-form {
@@ -247,9 +253,11 @@ nav {
     border: solid;
     border-radius: 25%;
     border-color: rgb(83, 212, 83);
-    margin: auto;
+    background-color: rgb(0, 0, 0, 0.5);
     padding: 5%;
     z-index: 1;
-    width: 35%;
-    height: 20%;
+    max-width: 200px;
+    max-height: 200px;
+    margin-top: 15%;
+    margin-right: 15%;
 }
