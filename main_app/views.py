@@ -51,6 +51,8 @@ class LocationUpdate(UpdateView):
     def get_success_url(self):
         return reverse('location_detail', kwargs={'pk': self.object.pk})
 
+
+
 @method_decorator(login_required, name='dispatch')
 class LocationDelete(DeleteView):
     model = Location
@@ -72,3 +74,4 @@ class Signup(View):
         else:
             context = {"form": form}
             return render(request, "registration/signup.html", context)
+
