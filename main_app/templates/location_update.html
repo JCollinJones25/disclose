@@ -1,10 +1,12 @@
 {% extends 'base.html' %}
 {%load static%}
 {% block content %}
-<h1>Edit {{location.name}}</h1>
-<form method="post">
-    {% csrf_token %}
-    {{form.as_p}}
-    <input type="submit" value="Submit" />
-</form>
+<div class="create_update_view">
+    <h1>Edit {{location.name}}</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{form.as_p}}
+        <input type="submit" value="Submit" />
+    </form>
+</div>
 {% endblock%}

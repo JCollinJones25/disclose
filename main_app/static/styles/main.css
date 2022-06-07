@@ -290,3 +290,12 @@ input, textarea, .btn {
     margin-top: 75px;
     text-align: center;
 }
+
+.create_update_view {
+    text-align: center;
+    margin-top: 75px;
+}
+
+form {
+    color: white;
+}
