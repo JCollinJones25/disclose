@@ -3,7 +3,7 @@
   <div class="login-img">
     <img src="https://i.stack.imgur.com/cV3FK.png" />
   </div>
-  <div class="login-form">
+  <div class="signup-form">
     <h1 class="title">Sign Up</h1>
     <form method="post" action="{% url 'signup' %}">
       {% csrf_token %} {{ form.as_p }}

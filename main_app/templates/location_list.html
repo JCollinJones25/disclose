@@ -16,10 +16,10 @@ Dislose
      {% for location in locations %}
         <a href="/locations/{{location.id}}">
             <div class="list-item">
-                <h2>{{location.name}} - {{location.city}}, {{location.state}}</h2>
                 <div class="list-img-container">
                     <img class="list-img" src='{{location.img}}' alt="'{{location.name}}"/>
                 </div>
+                <h2>{{location.name}} - {{location.city}}, {{location.state}}</h2>
             </div>
         </a>
     <hr>
