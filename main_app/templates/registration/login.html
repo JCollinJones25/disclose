@@ -3,13 +3,15 @@
   <div class="login-img">
     <img src="https://i.stack.imgur.com/cV3FK.png" />
   </div>
-  <div class="login-form">
-    <h1 class="title">Log In</h1>
-    <form method="post" action="{% url 'login' %}">
-      {% csrf_token %} {{ form.as_p }}
-      <input type="submit" class="btn" value="Login" />
-      <input type="hidden" name="next" value="{{ next }}" />
-    </form>
+  <div class="login-form-container">
+    <div class="login-form">
+      <h1 class="title">Log In</h1>
+      <form method="post" action="{% url 'login' %}">
+        {% csrf_token %} {{ form.as_p }}
+        <input type="submit" class="btn" value="Login" />
+        <input type="hidden" name="next" value="{{ next }}" />
+      </form>
+    </div>
   </div>
 </div>
 
