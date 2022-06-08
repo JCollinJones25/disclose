@@ -1,46 +1,24 @@
-{%load static%}
-<!DOCTYPE html>
-<html>
-  <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet">
-    <title>Disclose</title>
-    <script src="../static/scripts/index.js" defer></script>
-    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+{%extends 'base.html'%} {%load static%} {% block content %}
+<div class="map-container">
+  <div id="map"></div>
+</div>
+{% for location in locations %}
+<div class="name">
+  <h3>{{location.name}}</h3>
+</div>
+<div class="lat">
+  {{location.lat}}
+</div>
+<div class="lng">
+  {{location.lng}}
+</div>
+<hr>
+{% endfor %}
+<script type="text/javascript">
 
-    <link href="../static/styles/main.css" rel="stylesheet" />
-    <script type="module" src="../static/scripts/index.js"></script>
-  </head>
-  <body>
-    <div class="header">
-      <nav>
-        <a class="title" href="{% url 'home' %}">Disclose</a>
-        <a href="{% url 'location_list' %}">Locations</a>
-      </nav>
-      <div class="auth">
-        {% if user.is_authenticated %}
-        <div class="navbar-menu navbar-end">
-          <span class="navbar-item">Welcome {{user.username}}</span>
-          <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
-        </div>
-        {% else %}
-        <div class="navbar-menu navbar-end">
-          <a class="navbar-item" href="{% url 'login' %}">Login</a>
-          <a class="navbar-item" href="{% url 'signup' %}">Sign Up</a>
-        </div>
-        {% endif %}
-      </div>
-    </div>
-    <div class="map-container">
-      <div id="map"></div>
-    </div>
+  const API_KEY = "{{API_KEY | safe}}"
 
-    <script
-      async="false"
-      type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB41DRUbKWJHPxaFjMAwdrzWzbVKartNGg&callback=initMap"
-    ></script>
-    
-  </body>
-</html>
+  mapboxgl.accessToken = API_KEY
+
+</script>
+{% endblock %}

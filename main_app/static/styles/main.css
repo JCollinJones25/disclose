@@ -4,6 +4,9 @@
     justify-content: center;
     display: flex;
     margin: auto;
+    border: solid;
+    border-width: 2px;
+    border-color:rgb(83, 212, 83);
 }
 
 .map-container {
@@ -14,6 +17,7 @@
     margin: auto;
     margin-top: 5%;
 }
+
 
 body {
     background-color: black;

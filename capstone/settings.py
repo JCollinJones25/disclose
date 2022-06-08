@@ -11,9 +11,9 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
+from dotenv import load_dotenv
 import os
 import environ
-
 
 env = environ.Env()
 environ.Env.read_env()
@@ -26,10 +26,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-3$7yoxygx!)e&(t1l#&$kx32^qp5ky2m1iwclz)d-7v81z(-e('
+SECRET_KEY = os.getenv('SECRET_KEY')
 
-GOOGLE_MAPS_API_KEY = os.environ.get('GOOGLE_MAPS_API_KEY')
-
+API_KEY = os.getenv("API_KEY")
+print(API_KEY)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
@@ -88,6 +88,7 @@ DATABASES = {
         'NAME': 'disclose',
     }
 }
+
 
 
 # Password validation
