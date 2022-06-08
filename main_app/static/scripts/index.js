@@ -4,6 +4,8 @@ console.log("linked to index.js");
 
 const $lat = $('.lat')
 const $lng = $('.lng')
+$lat.hide() 
+$lng.hide() 
 const $name = $('.name')
 
 console.log($lat, $lng)

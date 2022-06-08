@@ -1,7 +1,9 @@
 {%extends 'base.html'%} 
 {%load static%} 
 {% block content %}
-<div id="map"></div>
+<div class="map-container">
+  <div id="map"></div>
+</div>
 {% for location in locations %}
 <div class="name">
   <h3>{{location.name}}</h3>

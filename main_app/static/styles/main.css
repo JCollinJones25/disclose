@@ -1,10 +1,16 @@
 #map {
     height: 400px;
     width: 80%;
+    margin-top: 400px;
     margin: auto;
     border: solid;
     border-width: 2px;
     border-color:rgb(83, 212, 83);
+}
+
+.map-container{
+    display: flex;
+    margin-top:40px;
 }
 
 .mapboxgl-popup {
@@ -152,27 +158,6 @@ a {
     
 }
 
-.location-img-other {
-    width: 100%;
-    height: 25%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 15px;
-    margin: auto;
-}
-
-.other-img {
-    width: 30%;
-    height: 30%;
-    object-fit: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    margin: auto;
-}
-
 .location-img img {
     width: 75%;
     height: 60%;
@@ -204,7 +189,7 @@ nav {
 }
 
 .auth {
-    width: 40%;
+    width: 400px;
     height: 55px;
     border-left: solid;
     display: flex;
@@ -300,4 +285,10 @@ input, textarea, .btn {
 
 form {
     color: white;
+}
+
+@media only screen and (max-width: 600px) {
+.auth {
+    font-size: 13px;
+    }
 }
