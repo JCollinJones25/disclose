@@ -19,18 +19,29 @@ map.scrollZoom.enable({around: 'right'});
 map.addControl(new mapboxgl.NavigationControl());
 
 
+
+
+
 for (let i = 0; i < $lat.length; i++){
   console.log(i +1)
   console.log($name[i].innerText)
   console.log($lat[i].innerText)
   console.log($lng[i].innerText)
   console.log('-----------')
+  const popup = new mapboxgl.Popup({ offset: 25 }).setText(
+    $name[i].innerText
+    );
+     
+  const el = document.createElement('div');
+  el.id = 'marker';
   const marker = new mapboxgl.Marker({color: 'purple'})
   .setLngLat([$lng[i].innerText, $lat[i].innerText])
+  .setPopup(popup) // sets a popup on this marker
   .addTo(map);
   marker.setPitchAlignment('map');
   }
-
+     
+    
 
 
 /*
