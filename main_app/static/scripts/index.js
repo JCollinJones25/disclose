@@ -32,3 +32,17 @@ for (let i = 0; i < $lat.length; i++){
   }
 
 
+
+/*
+
+TODO:   Wednesday
+
+Pop ups
+
+data entry
+
+style home and list template ???
+  - overflow scroll window on left of map with locations?
+
+*/
+
