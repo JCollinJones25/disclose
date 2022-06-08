@@ -196,52 +196,28 @@ a {
 .header {
     display: flex;
     justify-content: space-between;
-}
-
-
-
-.header a {
+    align-items: center;
+    text-align: center;
     color: purple;
     text-decoration: none;
+    margin: 10px;
 }
 
-.auth {
-    width: 45%;
+.auth,
+.navbar-menu .navbar-end {
+    width: 75%;
     height: 55px;
     display: flex;
     align-items: center;
     text-align: right;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between; 
+    justify-content: right; 
 } 
-
-.navbar-menu .navbar-end {
-    width: 45%;
-    height: 55px;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    display: flex;
-    justify-content: space-evenly;
-}
 
 .navbar-item {
     margin: 10px;
 }
-
-/* .login-page {
-    display: flex;
-    justify-content: center;
-}
-
-#visual {
-    height: auto;
-    width: 100%;
-    z-index: -1;
-    position: fixed;
-    object-fit: cover; 
-    overflow: hidden;
-} */
 
 .login-page {
     display: flex;
@@ -249,13 +225,10 @@ a {
 } 
 
 #backdrop {
-    margin-top: 30px;
     height: 100%;
     width: 100%;
     z-index: -1;
     position: absolute;
-    overflow-y: hidden;
-    overflow-x: hidden;
     object-fit: cover;
 }
 
@@ -268,7 +241,7 @@ a {
     border-color: purple;
     background-color: rgb(211, 211, 211, 0.5);
     z-index: 1;
-    max-width: 300px;
+    max-width: 400px;
     max-height: 500px;
     margin-top: 10%;
     margin-right: 10%;
@@ -290,13 +263,18 @@ a {
     background-color: rgb(211, 211, 211, 0.5);
     padding: 5%;
     z-index: 1;
-    max-width: 300px;
+    max-width: 400px;
     max-height: 500px;
     margin-top: 5%;
     margin-right: 10%;
 }
 
-input, textarea, .btn {
+input, .btn {
+    color: white;
+    background-color:purple;
+}
+
+input, textarea {
     background-color: rgb(211, 211, 211, 0.5);
     color:purple;
     font-family: 'Inconsolata', monospace;
@@ -323,8 +301,50 @@ form {
         font-size: 13px;
     }
 
-    /* #visual{
-        height: 175%;
-        width: auto;
-    } */
+    .home {
+        flex-direction: column-reverse;
+        justify-content: center;
+        text-align: center;
+    }
+
+    #map {
+        height: 75%;
+        width: 90%;
+        margin-top: 5%;
+        
+    }
+    
+    .map-container{
+        width: 75%;
+        height: 400px;
+        margin-top: 50px;
+    }
+
+    .location-list {
+        width: 90%;
+    }
+
+
+    .login-form {
+        max-width: 80%;
+        max-height: 500px;
+        margin: 0;
+        margin-top: 10%;
+    }
+    
+    .login-form-container{
+        display: flex;
+        justify-content: center;
+        z-index: 1;
+        width: 100%;
+    }
+    
+    .signup-form {
+        max-width: 80%;
+        margin: 0;
+        margin-top: 10%;
+        max-height: 500px;
+    }
+
+
 }
