@@ -23,9 +23,7 @@
 </head>
 <body>
     <div class="header">
-        <nav>
-            <a class="title" href="{% url 'home' %}">Disclose</a>
-        </nav>
+        <a class="title" href="{% url 'home' %}">Disclose</a>
         <div class="auth">
           {% if user.is_authenticated %}
           <div class="navbar-menu navbar-end">

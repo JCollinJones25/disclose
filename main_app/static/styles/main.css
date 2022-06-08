@@ -198,14 +198,7 @@ a {
     justify-content: space-between;
 }
 
-nav {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-left: 5%;
-    margin-right: 5%;
-}
+
 
 .header a {
     color: purple;
@@ -213,16 +206,21 @@ nav {
 }
 
 .auth {
-    width: 400px;
+    width: 45%;
     height: 55px;
     display: flex;
     align-items: center;
-    text-align: center;
-    justify-content: center;
-}
+    text-align: right;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between; 
+} 
 
 .navbar-menu .navbar-end {
+    width: 45%;
+    height: 55px;
     flex-direction: row;
+    flex-wrap: nowrap;
     display: flex;
     justify-content: space-evenly;
 }
@@ -231,7 +229,7 @@ nav {
     margin: 10px;
 }
 
-.login-page {
+/* .login-page {
     display: flex;
     justify-content: center;
 }
@@ -241,31 +239,44 @@ nav {
     width: 100%;
     z-index: -1;
     position: fixed;
-    /* object-fit: cover; */
+    object-fit: cover; 
     overflow: hidden;
+} */
+
+.login-page {
+    display: flex;
+    justify-content: center;
+} 
+
+#backdrop {
+    margin-top: 30px;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    position: absolute;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    object-fit: cover;
 }
 
 .login-form {
     display: flex;
     flex-direction: column;
+    padding: 75px;
     border: solid;
     border-radius: 25px;
     border-color: purple;
     background-color: rgb(211, 211, 211, 0.5);
-    padding: 55px;
     z-index: 1;
-    width: 200px;
-    height: auto;
-    margin-right: 25%;
-    margin: auto;
-    /* float: right; */
-    position: fixed;
+    max-width: 300px;
+    max-height: 500px;
+    margin-top: 10%;
+    margin-right: 10%;
 }
 
 .login-form-container{
     display: flex;
     justify-content: right;
-    align-items: flex-start;
     z-index: 1;
     width: 100%;
 }
@@ -282,7 +293,7 @@ nav {
     max-width: 300px;
     max-height: 500px;
     margin-top: 5%;
-    margin-right: 5%;
+    margin-right: 10%;
 }
 
 input, textarea, .btn {
