@@ -13,12 +13,8 @@ from django.utils.decorators import method_decorator
 import requests
 from django.conf import settings
 
-# def default_map(request):
-#     context = {
-#         "API_KEY": settings.API_KEY,
-#     }
-#     print(context)
-#     return render(request, 'home.html', context)
+
+
 
 @method_decorator(login_required, name='dispatch')
 class Home(TemplateView):
