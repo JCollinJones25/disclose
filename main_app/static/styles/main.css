@@ -227,7 +227,7 @@ a {
     color: rgb(101,27,148);
 }
 
-footer {
+.footer {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -235,6 +235,14 @@ footer {
     background-color: rgb(101,27,148);
     color: white;
     bottom: 0;
+    padding: 5px;
+}
+
+.github, .linkedin {
+    width: auto;
+    height: 55px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 .auth {
