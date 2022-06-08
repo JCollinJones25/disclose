@@ -23,9 +23,10 @@ Disclose is a social media type of platform that caters to the 'urban explorer' 
 
 ## Stretch Goals
 - AUTH ✅
-- Display location data on map
-- Map markers have pop up window with location info
+- Display location data on map ✅
+- Map markers have pop up window with location info ✅
 - Users can only update and/or delete data they created (with their user id)
+- profile page (profile pic, change password)
 - Add comment data model
 - More styling
 

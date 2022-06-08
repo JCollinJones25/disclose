@@ -22,22 +22,27 @@
     <title>Disclose</title>
 </head>
 <body>
-    <div class="header">
-        <a class="title" href="{% url 'home' %}">Disclose</a>
-        <div class="auth">
-          {% if user.is_authenticated %}
-          <div class="navbar-menu navbar-end">
-            <span class="navbar-item">Welcome {{user.username}}</span>
-            <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
-          </div>
-          {% else %}
-          <div class="navbar-menu navbar-end">
-            <a class="navbar-item" href="{% url 'login' %}">Login</a>
-            <a class="navbar-item" href="{% url 'signup' %}">Sign Up</a>
-          </div>
-          {% endif %}
-        </div>
+    {% if user.is_authenticated %}
+    <div class="header-in">
+      <a class="title" href="{% url 'home' %}"><strong>Disclose</strong></a>
+      <div class="auth">
+        <span class="navbar-item">Welcome {{user.username}}</span>
+        <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
       </div>
-    {% block content %} {% endblock %}
-</body>
+    </div>
+    {% else %}
+    <div class="header-out">
+      <a class="title" href="{% url 'home' %}"><strong>Disclose</strong></a>
+      <div class="auth">
+        <a class="navbar-item" href="{% url 'login' %}">Login</a>
+        <a class="navbar-item" href="{% url 'signup' %}">Sign Up</a>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+  {% block content %} {% endblock %}
+  <footer>
+    <h1>Footer</h1>
+  </footer>
+  </body>
 </html>

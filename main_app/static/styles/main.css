@@ -1,18 +1,39 @@
+body {
+    background-color: lightgrey;
+    color: rgb(101,27,148);
+    font-family: 'Inconsolata', monospace;
+    margin: 0;
+}
+
+a { 
+    color: rgb(101,27,148);
+    text-decoration: none;
+}
+
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
 #map {
-    height: 400px;
-    width: 75%;
-    margin-top: 400px;
-    margin: auto;
+    height: 100%;
+    width: 90%;
     border: solid;
     border-width: 2px;
-    border-color:purple;
+    border-color:rgb(101,27,148);
     border-radius: 15px;
 }
 
 .map-container{
-    width: 75%;
-    height: 400px;
-    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    height: 500px;
 }
 
 .mapboxgl-popup {
@@ -21,19 +42,8 @@
     text-align: center;
 }
 
-body {
-    background-color: lightgrey;
-    color: purple;
-    font-family: 'Inconsolata', monospace;
-}
-
-.home {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    margin: auto;
-    flex-wrap: nowrap;
-    margin-top: 40px;
+.searchbar {
+    border-radius: 15px;
 }
 
 .location-list {
@@ -43,13 +53,11 @@ body {
     margin-left: 5%;
     border-radius: 15px;
     overflow-y: scroll;
-    max-height: 500px;
-    max-width: 25%;
-}
-
-a {
-    color: purple;
-    text-decoration: none;
+    height: 500px;
+    width: 25%;
+    font-size: 10px;
+    padding: 5px;
+    margin-left: 10px;
 }
 
 .locations {
@@ -60,7 +68,7 @@ a {
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
-    color: purple;
+    color: rgb(101,27,148);
 }
 
 .list-item {
@@ -96,7 +104,7 @@ a {
     align-items: center;
     justify-content: center;
     margin: 25px;
-    color: purple;
+    color: rgb(101,27,148);
 }
 
 .buttons {
@@ -121,7 +129,7 @@ a {
     justify-content: center;
     padding: 5px;
     color: white;
-    border-color: purple;
+    border-color: rgb(101,27,148);
 }
 
 .red {
@@ -135,7 +143,6 @@ a {
     justify-content: center;
     padding: 5px;
     border: solid;
-    
 }
 
 .green {
@@ -167,7 +174,7 @@ a {
     display: flex;
     flex-direction: column;
     padding: 15px;
-    color: purple;
+    color: rgb(101,27,148);
 }
 
 .location-img {
@@ -179,7 +186,6 @@ a {
     align-items: center;
     padding: 15px;
     margin: auto;
-    
 }
 
 .location-img img {
@@ -193,18 +199,45 @@ a {
     font-size: 20px;
 }
 
-.header {
+.header-in {
     display: flex;
     justify-content: space-between;
     align-items: center;
     text-align: center;
-    color: purple;
     text-decoration: none;
-    margin: 10px;
+    padding: 10px;
+    background-color: rgb(101,27,148);
+    color: white;
 }
 
-.auth,
-.navbar-menu .navbar-end {
+.header-out {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    padding: 10px;
+} 
+
+.header-in a {
+    color: white;
+}
+
+.header-out a {
+    color: rgb(101,27,148);
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    background-color: rgb(101,27,148);
+    color: white;
+    bottom: 0;
+}
+
+.auth {
     width: 75%;
     height: 55px;
     display: flex;
@@ -238,7 +271,7 @@ a {
     padding: 75px;
     border: solid;
     border-radius: 25px;
-    border-color: purple;
+    border-color: rgb(101,27,148);
     background-color: rgb(211, 211, 211, 0.5);
     z-index: 1;
     max-width: 400px;
@@ -259,7 +292,7 @@ a {
     flex-direction: column;
     border: solid;
     border-radius: 25px;
-    border-color: purple;
+    border-color: rgb(101,27,148);
     background-color: rgb(211, 211, 211, 0.5);
     padding: 5%;
     z-index: 1;
@@ -271,14 +304,14 @@ a {
 
 input, .btn {
     color: white;
-    background-color:purple;
+    background-color:rgb(101,27,148);
 }
 
 input, textarea {
     background-color: rgb(211, 211, 211, 0.5);
-    color:purple;
+    color:rgb(101,27,148);
     font-family: 'Inconsolata', monospace;
-    border-color: purple;
+    border-color: rgb(101,27,148);
     padding: 5px;
 }
 
@@ -293,10 +326,12 @@ input, textarea {
 }
 
 form {
-    color: purple;
+    color: rgb(101,27,148);
 }
 
+
 @media only screen and (max-width: 600px) {
+    
     .auth {
         font-size: 13px;
     }
@@ -308,22 +343,24 @@ form {
     }
 
     #map {
-        height: 75%;
-        width: 90%;
+        height: 90%;
+        width: 100%;
         margin-top: 5%;
-        
+        margin: auto;
     }
     
     .map-container{
-        width: 75%;
+        width: 85%;
         height: 400px;
         margin-top: 50px;
+        margin: auto;
     }
-
+    
     .location-list {
         width: 90%;
+        height: 300px;
+        margin: auto;
     }
-
 
     .login-form {
         max-width: 80%;

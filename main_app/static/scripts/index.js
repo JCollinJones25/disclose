@@ -38,7 +38,7 @@ for (let i = 0; i < $lat.length; i++){
   const el = document.createElement('div');
   el.id = 'marker';
 
-  const marker = new mapboxgl.Marker({color: 'purple'})
+  const marker = new mapboxgl.Marker({color: 'rgb(0, 148, 115)'})
   .setLngLat([$lng[i].innerText, $lat[i].innerText])
   .setPopup(popup) 
   .addTo(map);
@@ -47,17 +47,5 @@ for (let i = 0; i < $lat.length; i++){
   
   
   
-  
-/*
 
-TODO:   Wednesday
-
-Pop ups
-
-data entry
-
-style home and list template ???
-  - overflow scroll window on left of map with locations?
-
-*/
 
