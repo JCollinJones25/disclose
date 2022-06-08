@@ -215,7 +215,6 @@ nav {
 .auth {
     width: 400px;
     height: 55px;
-    border-left: solid;
     display: flex;
     align-items: center;
     text-align: center;
@@ -235,25 +234,26 @@ nav {
 .login-page {
     display: flex;
     justify-content: center;
+    /* background-color: #715df1; */
+    /* object-fit: cover; */
 } 
 
 #visual {
     z-index: -1;
-    width: auto;
-    height: 150%;
+    width: 100%;
+    height: 100%;
+    object-position: top;
+    position: fixed;
+    size: cover;
     display: flex;
     align-items: flex-start;
-    justify-content: center;
-    margin: auto;
-    position: fixed;
-    object-fit: cover;
 }
 
 .login-form {
     display: flex;
     flex-direction: column;
     border: solid;
-    border-radius: 25%;
+    border-radius: 25px;
     border-color: purple;
     background-color: rgb(211, 211, 211, 0.5);
     padding: 55px;
@@ -277,7 +277,7 @@ nav {
     display: flex;
     flex-direction: column;
     border: solid;
-    border-radius: 15%;
+    border-radius: 25px;
     border-color: purple;
     background-color: rgb(211, 211, 211, 0.5);
     padding: 5%;
@@ -311,7 +311,12 @@ form {
 }
 
 @media only screen and (max-width: 600px) {
-.auth {
-    font-size: 13px;
+    .auth {
+        font-size: 13px;
     }
+
+    /* #visual{
+        height: 175%;
+        width: auto;
+    } */
 }
