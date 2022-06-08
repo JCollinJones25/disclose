@@ -15,10 +15,9 @@ const map = new mapboxgl.Map({
   zoom: 2,
 });
 
-map.scrollZoom.enable({around: 'right'});
+map.scrollZoom.enable({around: 'mouse'});
 map.addControl(new mapboxgl.NavigationControl());
-
-
+map.boxZoom.enable();
 
 
 
@@ -36,7 +35,7 @@ for (let i = 0; i < $lat.length; i++){
   el.id = 'marker';
   const marker = new mapboxgl.Marker({color: 'purple'})
   .setLngLat([$lng[i].innerText, $lat[i].innerText])
-  .setPopup(popup) // sets a popup on this marker
+  .setPopup(popup) 
   .addTo(map);
   marker.setPitchAlignment('map');
   }

@@ -1,24 +1,17 @@
-{%extends 'base.html'%} {%load static%} {% block content %}
-<div class="map-container">
-  <div id="map"></div>
-</div>
+{%extends 'base.html'%} 
+{%load static%} 
+{% block content %}
+<div id="map"></div>
 {% for location in locations %}
 <div class="name">
   <h3>{{location.name}}</h3>
 </div>
-<div class="lat">
-  {{location.lat}}
-</div>
-<div class="lng">
-  {{location.lng}}
-</div>
-<hr>
+<div class="lat">{{location.lat}}</div>
+<div class="lng">{{location.lng}}</div>
+<hr />
 {% endfor %}
 <script type="text/javascript">
-
-const API_KEY = "{{API_KEY | safe}}"
-
-mapboxgl.accessToken = API_KEY
-
+  const API_KEY = "{{API_KEY | safe}}";
+  mapboxgl.accessToken = API_KEY;
 </script>
 {% endblock %}

@@ -1,21 +1,10 @@
 #map {
     height: 400px;
     width: 80%;
-    justify-content: center;
-    display: flex;
     margin: auto;
     border: solid;
     border-width: 2px;
     border-color:rgb(83, 212, 83);
-}
-
-.map-container {
-    height: 400px;
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    margin: auto;
-    margin-top: 5%;
 }
 
 .mapboxgl-popup {
