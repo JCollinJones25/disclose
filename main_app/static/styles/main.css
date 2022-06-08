@@ -1,17 +1,18 @@
 #map {
     height: 400px;
-    width: 80%;
+    width: 75%;
     margin-top: 400px;
     margin: auto;
     border: solid;
     border-width: 2px;
-    border-color:rgb(83, 212, 83);
-    border-radius: 5%;
+    border-color:purple;
+    border-radius: 15px;
 }
 
 .map-container{
     width: 75%;
-    height: 80%;
+    height: 400px;
+    margin-top: 50px;
 }
 
 .mapboxgl-popup {
@@ -21,14 +22,16 @@
 }
 
 body {
-    background-color: black;
-    color: rgb(83, 212, 83);
+    background-color: lightgrey;
+    color: purple;
     font-family: 'Inconsolata', monospace;
 }
 
 .home {
     display: flex;
     flex-direction: row;
+    justify-content: center;
+    margin: auto;
     flex-wrap: nowrap;
     margin-top: 40px;
 }
@@ -37,14 +40,15 @@ body {
     display: flex;
     flex-direction: column;
     border: solid;
-    border-radius: 5%;
-    overflow-y: hidden;
-    height: 80%;
-    width: 25%;
+    margin-left: 5%;
+    border-radius: 15px;
+    overflow-y: scroll;
+    max-height: 500px;
+    max-width: 25%;
 }
 
 a {
-    color: white;
+    color: purple;
     text-decoration: none;
 }
 
@@ -56,7 +60,7 @@ a {
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
-    color: white;
+    color: purple;
 }
 
 .list-item {
@@ -92,7 +96,7 @@ a {
     align-items: center;
     justify-content: center;
     margin: 25px;
-    color: white;
+    color: purple;
 }
 
 .buttons {
@@ -117,7 +121,7 @@ a {
     justify-content: center;
     padding: 5px;
     color: white;
-    border-color: white;
+    border-color: purple;
 }
 
 .red {
@@ -163,7 +167,7 @@ a {
     display: flex;
     flex-direction: column;
     padding: 15px;
-    color: white;
+    color: purple;
 }
 
 .location-img {
@@ -204,7 +208,7 @@ nav {
 }
 
 .header a {
-    color: rgb(83, 212, 83);
+    color: purple;
     text-decoration: none;
 }
 
@@ -236,14 +240,16 @@ nav {
 } 
 
 .login-img {
+    background: url('images/low-poly-grid-haikei.png');
+    background-color: blue;
     z-index: -1;
-    position: absolute;
+    /* position: absolute;
     overflow-y: hidden;
     overflow-x: hidden;
     display: flex;
     margin: auto;
     object-fit: cover;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .login-form {
@@ -251,8 +257,8 @@ nav {
     flex-direction: column;
     border: solid;
     border-radius: 25%;
-    border-color: rgb(83, 212, 83);
-    background-color: rgb(0, 0, 0, 0.5);
+    border-color: purple;
+    background-color: rgb(211, 211, 211, 0.5);
     padding: 55px;
     z-index: 1;
     width: 200px;
@@ -275,8 +281,8 @@ nav {
     flex-direction: column;
     border: solid;
     border-radius: 15%;
-    border-color: rgb(83, 212, 83);
-    background-color: rgb(0, 0, 0, 0.5);
+    border-color: purple;
+    background-color: rgb(211, 211, 211, 0.5);
     padding: 5%;
     z-index: 1;
     max-width: 300px;
@@ -286,10 +292,10 @@ nav {
 }
 
 input, textarea, .btn {
-    background-color: black;
-    color:rgb(83, 212, 83);
+    background-color: rgb(211, 211, 211, 0.5);
+    color:purple;
     font-family: 'Inconsolata', monospace;
-    border-color: rgb(83, 212, 83);
+    border-color: purple;
     padding: 5px;
 }
 
@@ -304,7 +310,7 @@ input, textarea, .btn {
 }
 
 form {
-    color: white;
+    color: purple;
 }
 
 @media only screen and (max-width: 600px) {
