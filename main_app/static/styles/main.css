@@ -1,3 +1,5 @@
+/* GLOBAL */
+
 body {
     background-color: lightgrey;
     color: rgb(101,27,148);
@@ -9,6 +11,8 @@ a {
     color: rgb(101,27,148);
     text-decoration: none;
 }
+
+/* HOME */
 
 .home {
     display: flex;
@@ -232,7 +236,7 @@ a {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    background-color: rgb(101,27,148);
+    background-color: rgb(0,148,115);
     color: white;
     bottom: 0;
     padding: 5px;
