@@ -6,21 +6,41 @@
     border: solid;
     border-width: 2px;
     border-color:rgb(83, 212, 83);
+    border-radius: 5%;
 }
 
 .map-container{
-    display: flex;
-    margin-top:40px;
+    width: 75%;
+    height: 80%;
 }
 
 .mapboxgl-popup {
     max-width: 200px;
+    min-width: 80px;
+    text-align: center;
 }
 
 body {
     background-color: black;
     color: rgb(83, 212, 83);
     font-family: 'Inconsolata', monospace;
+}
+
+.home {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-top: 40px;
+}
+
+.location-list {
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    border-radius: 5%;
+    overflow-y: hidden;
+    height: 80%;
+    width: 25%;
 }
 
 a {
