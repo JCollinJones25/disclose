@@ -5,10 +5,8 @@ console.log("linked to index.js");
 const $lat = $('.lat')
 const $lng = $('.lng')
 const $name = $('.name')
+
 console.log($lat, $lng)
-console.log($name[0].innerText, $lat[0].innerText, $lng[0].innerText)
-
-
 
 const map = new mapboxgl.Map({
   container: "map",
@@ -22,20 +20,15 @@ map.addControl(new mapboxgl.NavigationControl());
 
 
 for (let i = 0; i < $lat.length; i++){
-  for (let j = 0; j < $lng.length; j++){
+  console.log(i +1)
+  console.log($name[i].innerText)
   console.log($lat[i].innerText)
-  const marker1 = new mapboxgl.Marker({color: 'purple'})
-  .setLngLat([$lng[i].innerText, $lat[j].innerText])
+  console.log($lng[i].innerText)
+  console.log('-----------')
+  const marker = new mapboxgl.Marker({color: 'purple'})
+  .setLngLat([$lng[i].innerText, $lat[i].innerText])
   .addTo(map);
+  marker.setPitchAlignment('map');
   }
-}
 
-for (const feature of geojson.features) {
-  // create a HTML element for each feature
-  const el = document.createElement("div");
-  el.className = "marker";
-
-  // make a marker for each feature and add to the map
-  new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map);
-}
 
