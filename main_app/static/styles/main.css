@@ -234,19 +234,15 @@ nav {
 .login-page {
     display: flex;
     justify-content: center;
-    /* background-color: #715df1; */
-    /* object-fit: cover; */
-} 
+}
 
 #visual {
-    z-index: -1;
+    height: auto;
     width: 100%;
-    height: 100%;
-    object-position: top;
+    z-index: -1;
     position: fixed;
-    size: cover;
-    display: flex;
-    align-items: flex-start;
+    /* object-fit: cover; */
+    overflow: hidden;
 }
 
 .login-form {
@@ -260,17 +256,18 @@ nav {
     z-index: 1;
     width: 200px;
     height: auto;
-    margin-top: 100px;
-    margin-right: 15%;
-    float: right;
+    margin-right: 25%;
+    margin: auto;
+    /* float: right; */
     position: fixed;
 }
 
 .login-form-container{
     display: flex;
     justify-content: right;
-    width: 100%;
+    align-items: flex-start;
     z-index: 1;
+    width: 100%;
 }
 
 .signup-form {
