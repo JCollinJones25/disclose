@@ -22,6 +22,7 @@ label {
     border-radius: 15px;
     font-size: 15px;
     width: 65px;
+    margin: 10px;
 }
 
 #btn-link {
@@ -29,12 +30,16 @@ label {
     border-color: rgb(101,27,148);
     font-size: 15px;
     max-width: 65px;
+    margin: 10px;
 }
 
-input,
-form {
-    /* color: rgb(101,27,148); */
+input, textarea {
+    background-color: rgb(101, 27, 148);
     color: white;
+    font-family: 'Inconsolata', monospace;
+    border-color: rgb(101,27,148);
+    padding: 5px;
+    font-size: 15px;
 }
 
 
@@ -200,93 +205,56 @@ form {
 }
 
 
-/* DETAIL PAGE */
+/* CRUD VIEWS */
 
-.buttons {
+
+.crud_view {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    justify-content: space-evenly;
-    font-size: 12px;
-    max-width: 25%;
-    margin: auto;
-    margin-top: 30px;
-}
-
-.green-submit {
-    display: flex;
-    border-radius: 25%;
-    width: 75px;
-    height: 50px;
-    background-color: #009473;
     text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    color: white;
-    border-color: rgb(101,27,148);
-}
-
-.red {
-    display: flex;
-    border-radius: 25%;
-    width: 65px;
-    height: 40px;
-    background-color: rgb(237, 85, 85);
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    border: solid;
-}
-
-.green {
-    display: flex;
-    border-radius: 25%;
-    width: 65px;
-    height: 40px;
-    background-color: #009473;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    border: solid;
-}
-
-.location-detail {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 85%;
-    height: 75%;
-    margin: auto;
-    margin-top: 30px;
-}
-
-.location-text {
-    width: 45%;
-    height: 85%;
-    display: flex;
     flex-direction: column;
-    padding: 15px;
-    color: rgb(101,27,148);
+    border: solid;
+    border-radius: 15px;
+    border-width: 10px;
+    border-style: groove;
+    border-color: rgb(101,27,148);
+    background-color: rgb(101,27,148, 0.5);
+    color: white;
+    width: 75%;
+    height: auto;
+    min-height: 500px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    padding-right: 25px;
+    padding-left: 25px;
 }
 
 .location-img {
-    width: 55%;
-    height: 75%;
+    width: 400px;
+    max-height: 400px;
     object-fit: cover;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 15px;
     margin: auto;
+    border: solid;
+    border-radius: 15px;
+    border-width: 10px;
+    border-style: groove;
+    border-color: rgb(101,27,148);
 }
 
-.location-img img {
-    width: 75%;
-    height: 60%;
-    object-fit: cover;
+.buttons {
+    display: flex;
+    justify-content: center;
+    margin: 10px;
+}
+
+.delete_view {
+    margin-top: 75px;
+    text-align: center;
 }
 
 
@@ -343,48 +311,6 @@ form {
 }
 
 
-/* FORMS */
-
-input, .btn {
-    color: white;
-    background-color:rgb(101,27,148);
-}
-
-input, textarea {
-    background-color: rgb(211, 211, 211, 0.5);
-    color:rgb(101,27,148);
-    font-family: 'Inconsolata', monospace;
-    border-color: rgb(101,27,148);
-    padding: 5px;
-}
-
-.delete_view {
-    margin-top: 75px;
-    text-align: center;
-}
-
-.crud_view {
-    display: flex;
-    justify-content: center;
-    text-align: center;
-    flex-direction: column;
-    border: solid;
-    border-radius: 15px;
-    border-width: 10px;
-    border-style: groove;
-    border-color: rgb(101,27,148);
-    background-color: rgb(101,27,148, 0.5);
-    color: white;
-    width: 75%;
-    height: auto;
-    margin: auto;
-    margin-top: 25px;
-    margin-bottom: 25px;
-    padding-bottom: 10px;
-}
-
-
-
 /* MOBILE */
 
 @media only screen and (max-width: 600px) {
@@ -438,6 +364,11 @@ input, textarea {
         margin: 0;
         margin-top: 10%;
         max-height: 500px;
+    }
+
+    .location-img {
+        width: 220px;
+        height: 300px;
     }
 
 
