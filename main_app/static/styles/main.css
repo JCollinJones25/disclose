@@ -12,195 +12,10 @@ a {
     text-decoration: none;
 }
 
-/* HOME */
-
-.home {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: nowrap;
-    margin-top: 40px;
-    margin-bottom: 40px;
-}
-
-#map {
-    height: 100%;
-    width: 90%;
-    border: solid;
-    border-width: 2px;
-    border-color:rgb(101,27,148);
-    border-radius: 15px;
-}
-
-.map-container{
-    display: flex;
-    justify-content: center;
-    width: 85%;
-    height: 500px;
-}
-
-.mapboxgl-popup {
-    max-width: 200px;
-    min-width: 80px;
-    text-align: center;
-}
-
-.searchbar {
-    border-radius: 15px;
-}
-
-.location-list {
-    display: flex;
-    flex-direction: column;
-    border: solid;
-    margin-left: 5%;
-    border-radius: 15px;
-    overflow-y: scroll;
-    height: 500px;
-    width: 25%;
-    font-size: 10px;
-    padding: 5px;
-    margin-left: 10px;
-}
-
-.locations {
-    padding: 20px;
-}
-
-.list-top {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-    color: rgb(101,27,148);
-}
-
-.list-item {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.list-img-container {
-    justify-content: flex-start;
-    display: flex;
-}
-
-.list-img {
-    display: flex;
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    margin: 15px;
-}
-
-.add-new-container {
-    justify-content: flex-end;
-    display: flex;
-}
-
-.add-new {
-    display: flex;
-    border-radius: 25%;
-    width: 35px;
-    height: 35px;
-    background-color: rgb(83, 212, 83);
-    align-items: center;
-    justify-content: center;
-    margin: 25px;
-    color: rgb(101,27,148);
-}
-
-.buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    justify-content: space-evenly;
-    font-size: 12px;
-    max-width: 25%;
-    margin: auto;
-    margin-top: 30px;
-}
-
-.green-submit {
-    display: flex;
-    border-radius: 25%;
-    width: 75px;
-    height: 50px;
-    background-color: rgb(83, 212, 83);
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    color: white;
-    border-color: rgb(101,27,148);
-}
-
-.red {
-    display: flex;
-    border-radius: 25%;
-    width: 65px;
-    height: 40px;
-    background-color: rgb(237, 85, 85);
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    border: solid;
-}
-
-.green {
-    display: flex;
-    border-radius: 25%;
-    width: 65px;
-    height: 40px;
-    background-color: rgb(83, 212, 83);
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-    padding: 5px;
-    border: solid;
-}
-
-.location-detail {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 85%;
-    height: 75%;
-    margin: auto;
-    margin-top: 30px;
-}
-
-.location-text {
-    width: 45%;
-    height: 85%;
-    display: flex;
-    flex-direction: column;
-    padding: 15px;
-    color: rgb(101,27,148);
-}
-
-.location-img {
-    width: 55%;
-    height: 75%;
-    object-fit: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 15px;
-    margin: auto;
-}
-
-.location-img img {
-    width: 75%;
-    height: 60%;
-    object-fit: cover;
-}
-
-.title {
-    font-family: 'Inconsolata', monospace;
-    font-size: 20px;
+.header strong {
+    font-family: 'Bangers', cursive;
+    font-size: 30px;
+    margin-left: 20px;
 }
 
 .header-in {
@@ -264,6 +79,212 @@ a {
     margin: 10px;
 }
 
+
+/* HOME */
+
+.home {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+#map {
+    height: 100%;
+    width: 90%;
+    border: solid;
+    border-width: 2px;
+    border-color:rgb(101,27,148);
+    border-radius: 15px;
+}
+
+.map-container{
+    display: flex;
+    justify-content: center;
+    width: 85%;
+    height: 500px;
+}
+
+.mapboxgl-popup {
+    max-width: 200px;
+    min-width: 80px;
+    text-align: center;
+}
+
+.searchbar {
+    border-radius: 15px;
+    width: 75%;
+}
+
+.search-add {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
+
+.location-list {
+    display: flex;
+    flex-direction: column;
+    border: solid;
+    margin-left: 5%;
+    border-radius: 15px;
+    overflow-y: scroll;
+    height: 500px;
+    width: 25%;
+    font-size: 10px;
+    padding: 5px;
+    margin-left: 10px;
+}
+
+.add-new-container {
+    justify-content: flex-end;
+    display: flex;
+}
+
+.add-new {
+    display: flex;
+    border-radius: 25%;
+    width: 30px;
+    height: 30px;
+    background-color: #009473;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    color: white;
+}
+
+
+/* Location list page */
+
+.locations {
+    padding: 20px;
+}
+
+
+.list-top {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+    color: rgb(101,27,148);
+}
+
+.list-item {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.list-img-container {
+    justify-content: flex-start;
+    display: flex;
+}
+
+.list-img {
+    display: flex;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    margin: 15px;
+}
+
+
+/* DETAIL PAGE */
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-evenly;
+    font-size: 12px;
+    max-width: 25%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.green-submit {
+    display: flex;
+    border-radius: 25%;
+    width: 75px;
+    height: 50px;
+    background-color: #009473;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    color: white;
+    border-color: rgb(101,27,148);
+}
+
+.red {
+    display: flex;
+    border-radius: 25%;
+    width: 65px;
+    height: 40px;
+    background-color: rgb(237, 85, 85);
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: solid;
+}
+
+.green {
+    display: flex;
+    border-radius: 25%;
+    width: 65px;
+    height: 40px;
+    background-color: #009473;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    border: solid;
+}
+
+.location-detail {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 85%;
+    height: 75%;
+    margin: auto;
+    margin-top: 30px;
+}
+
+.location-text {
+    width: 45%;
+    height: 85%;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    color: rgb(101,27,148);
+}
+
+.location-img {
+    width: 55%;
+    height: 75%;
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+    margin: auto;
+}
+
+.location-img img {
+    width: 75%;
+    height: 60%;
+    object-fit: cover;
+}
+
+
+/* LOGIN */
+
 .login-page {
     display: flex;
     justify-content: center;
@@ -313,6 +334,9 @@ a {
     margin-top: 5%;
     margin-right: 10%;
 }
+
+
+/* FORMS */
 
 input, .btn {
     color: white;
