@@ -1,3 +1,4 @@
+
 /* GLOBAL */
 
 body {
@@ -55,9 +56,9 @@ input, textarea {
     align-items: center;
     text-align: center;
     text-decoration: none;
-    padding: 10px;
     background: linear-gradient(#651B94, #8559a0);
     color: white;
+    padding: 10px;
 }
 
 .header-out {
@@ -96,14 +97,14 @@ input, textarea {
 }
 
 .auth {
-    width: 75%;
-    height: 55px;
     display: flex;
     align-items: center;
+    justify-content: right; 
     text-align: right;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: right; 
+    width: 75%;
+    height: 55px;
 } 
 
 .navbar-item {
@@ -124,11 +125,11 @@ input, textarea {
 }
 
 #map {
+    border-color:rgb(101,27,148);
+    border: solid;
     height: 100%;
     width: 90%;
-    border: solid;
     border-width: 2px;
-    border-color:rgb(101,27,148);
     border-radius: 15px;
 }
 
@@ -152,15 +153,17 @@ input, textarea {
 
 .search-add {
     display: flex;
-    flex-direction: row;
     justify-content: center;
-    width: 100%;
+    flex-direction: row;
     margin: auto;
+    width: 100%;
 }
 
 .location-list {
     display: flex;
     flex-direction: column;
+    background-color: rgb(101,27,148);
+    color: white;
     border: solid;
     margin-left: 5%;
     border-radius: 15px;
@@ -169,21 +172,19 @@ input, textarea {
     font-size: 10px;
     padding: 10px;
     margin-left: 10px;
-    background-color: rgb(101,27,148);
-    color: white;
 }
 
 .list {
-    overflow-y: scroll;
     background-color: rgb(211, 211, 211, 0.5);
     color: white;
+    overflow-y: scroll;
     margin-top: 5px;
 }
 
 .list-item {
-    color: white;
     display: flex;
     justify-content: space-between;
+    color: white;
     width: 100%;
 }
 
@@ -194,19 +195,19 @@ input, textarea {
 
 .add-new {
     display: flex;
-    border-radius: 25%;
-    width: 30px;
-    height: 30px;
-    background-color: #009473;
     align-items: center;
     justify-content: center;
-    margin: 5px;
+    background-color: #009473;
     color: white;
+    width: 30px;
+    height: 30px;
+    border-radius: 25%;
+    margin: 5px;
+    cursor: pointer;
 }
 
 
 /* CRUD VIEWS */
-
 
 .crud_view {
     display: flex;
@@ -250,11 +251,32 @@ input, textarea {
     display: flex;
     justify-content: center;
     margin: 10px;
+}  
+
+.green-btn {
+    background-color: #009473;
+    display: flex;
+    border-radius: 25%;
+    width: 70px;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    color: white;
+    border: none;
+    cursor: pointer;
 }
 
-.delete_view {
-    margin-top: 75px;
-    text-align: center;
+.red-btn {
+    background-color: rgb(234, 73, 73);
+    display: flex;
+    border-radius: 25%;
+    width: 70px;
+    height: 55px;
+    align-items: center;
+    justify-content: center;
+    margin: 5px;
+    color: white;
 }
 
 
@@ -369,6 +391,12 @@ input, textarea {
     .location-img {
         width: 220px;
         height: 300px;
+    }
+
+    .crud-view {
+        padding: 10px;
+        min-height: 300px;
+        height: auto;
     }
 
 

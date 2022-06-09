@@ -1,16 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-<div class="delete_view">
-<h1>Are you sure you want to delete {{location.name}}</h1>
+<div class="crud_view">
+    <h1>Are you sure you want to delete {{location.name}}</h1>
     <form method="post">
-        {% csrf_token %}
+    {% csrf_token %}
         <div class="buttons">
-            <input class="green-submit" type="submit" value="Yes"/>
-            <a href="{% url 'location_detail' location.pk %}">
-                <div class="red">
-                    No
-                </div>
-            </a>
+            <input class="green-btn" type="submit" value="Yes"/>
+            <a class="red-btn" href="{% url 'location_detail' location.pk %}">No</a>
         </div>
     </form>
 </div>

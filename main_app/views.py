@@ -54,7 +54,7 @@ class LocationUpdate(UpdateView):
 class LocationDelete(DeleteView):
     model = Location
     template_name = 'location_delete_confirmation.html'
-    success_url = '/locations/'
+    success_url = '/'
 
 
 class Signup(View):
