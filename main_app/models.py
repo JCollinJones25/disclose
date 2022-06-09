@@ -20,3 +20,11 @@ class Location(models.Model):
     class Meta:
         ordering = ['state']
     
+
+class Comment(models.Model):
+    location = models.ForeignKey(Location, on_delete=models.CASCADE, default=1)
+    author = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
+    text = models.TextField(max_length=700)
+
+    def __str__(self):
+        return self.text
