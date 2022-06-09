@@ -64,7 +64,7 @@ class LocationDelete(DeleteView):
 class CommentCreate(CreateView):
     model = Comment
     fields = ['location', 'author', 'text']
-    template_name = 'location_detail.html'
+    template_name = 'comment_create.html'
 
     def form_valid(self, form):
         form.instance.user = self.request.user
