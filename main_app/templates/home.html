@@ -3,16 +3,30 @@
 {% block content %}
 <div class="home">
   <div class="location-list">
-    {% for location in locations %}
-    <div class="name">
-      <h3>{{location.name}}</h3>
+    <div class="search-add">
+      <input class="searchbar" type="text" placeholder="Search by state...">
+      <div class="add-new-container">
+        <form action="{% url 'location_create' %}">
+          <input class='add-new' type="submit" value="+"/>
+        </form>
+      </div>
     </div>
-    <div class="city-state">{{location.city}}, {{location.state}}</div>
-    <div class="lat">{{location.lat}}</div>
-    <div class="lng">{{location.lng}}</div>
-    <img class="home-img" src='{{location.img}}'/>
-    <hr />
-    {% endfor %}
+    <div class="list">
+      {% for location in locations %}
+      <div class="list-item">
+        <a href="/locations/{{location.id}}">
+          <div class="name">
+            <h3>{{location.name}}</h3>
+          </div>
+          <div class="city-state">{{location.city}}, {{location.state}}</div>
+          <div class="lat">{{location.lat}}</div>
+          <div class="lng">{{location.lng}}</div>
+          <img class="home-img" src='{{location.img}}'/>
+          <hr>
+        </a>
+      </div>
+      {% endfor %}
+    </div>
   </div>
   <div class="map-container">
     <div id="map"></div>

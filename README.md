@@ -2,7 +2,7 @@
 - Mapbox API - [https://docs.mapbox.com/api/overview/](https://docs.mapbox.com/api/overview/)
 
 ## Technologies Used
-Django, PostgreSQL, Python, Javascript, HTML, CSS, Mapbox API
+Django, PostgreSQL, Python, Javascript, HTML, CSS, Flexbox, Mapbox API
 
 ## Description
 Disclose is a social media type of platform that caters to the 'urban explorer' crowd. It will allows users to share interesting/hidden/abandoned/exploring worthy locations that are otherwise not well known or only shared by word of mouth. If you're traveling through an area you can check the app for what any cool spots are nearby that only the locals know about. My app will just use the Google Maps API for the map which allows you to drop pins. Users just have to drop a pin on the map and enter data about the location (name, img, description).
@@ -23,10 +23,11 @@ Disclose is a social media type of platform that caters to the 'urban explorer' 
 
 ## Stretch Goals
 - AUTH ✅
-- Display location data on map
-- Map markers have pop up window with location info
+- Display location data on map ✅
+- Map markers have pop up window with location info ✅
 - Users can only update and/or delete data they created (with their user id)
+- profile page (profile pic, change password)
 - Add comment data model
-- More styling
+- Animations
 
 
