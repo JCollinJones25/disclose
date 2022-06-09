@@ -5,7 +5,7 @@ from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import DetailView
 from django.urls import reverse
 from django.shortcuts import redirect, render
-from .models import Location
+from .models import Location, Comment
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
@@ -27,6 +27,10 @@ class Home(TemplateView):
 class LocationDetail(DetailView):
     model = Location
     template_name = 'location_detail.html'
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['comments'] = Comment.objects.all()
+        return context
 
 @method_decorator(login_required, name='dispatch')
 class LocationCreate(CreateView):
@@ -49,12 +53,43 @@ class LocationUpdate(UpdateView):
     def get_success_url(self):
         return reverse('location_detail', kwargs={'pk': self.object.pk})
 
-
 @method_decorator(login_required, name='dispatch')
 class LocationDelete(DeleteView):
     model = Location
     template_name = 'location_delete_confirmation.html'
     success_url = '/'
+
+
+@method_decorator(login_required, name='dispatch')
+class CommentCreate(CreateView):
+    model = Comment
+    fields = ['location', 'author', 'text']
+    template_name = 'location_detail.html'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super(CommentCreate, self).form_valid(form)
+    
+    def get_success_url(self):
+        return reverse('location_detail', kwargs={'pk': self.object.pk})
+
+@method_decorator(login_required, name='dispatch')
+class CommentUpdate(UpdateView):
+    model = Comment
+    fields = ['location', 'author', 'text']
+    template_name = 'comment_update.html'
+    def get_success_url(self):
+        return reverse('location_detail', kwargs={'pk': self.object.pk})
+
+
+@method_decorator(login_required, name='dispatch')
+class CommentDelete(DeleteView):
+    model = Comment
+    template_name = 'comment_delete_confirmation.html'
+    def get_success_url(self):
+        return reverse('location_detail', kwargs={'pk': self.object.pk})
+
+
 
 
 class Signup(View):
