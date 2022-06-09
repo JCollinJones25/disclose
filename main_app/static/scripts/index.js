@@ -25,7 +25,7 @@ map.boxZoom.enable();
 
 for (let i = 0; i < $lat.length; i++){
 
-  const popup = new mapboxgl.Popup({ offset: 25 }).setHTML($name[i].innerText, $img[i].src);
+  const popup = new mapboxgl.Popup({ offset: 25 }).setHTML($name[i].innerText);
   const el = document.createElement('div');
   el.id = 'marker';
 
@@ -35,4 +35,3 @@ for (let i = 0; i < $lat.length; i++){
   .addTo(map);
 
   }
-
