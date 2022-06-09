@@ -28,7 +28,7 @@
     <div class="header">
       {% if user.is_authenticated %}
       <div class="header-in">
-        <a class="title" href="{% url 'home' %}"><strong>Disclose</strong></a>
+        <a class="title" href="{% url 'home' %}"><strong>🗺 Disclose</strong></a>
         <div class="auth">
           <span class="navbar-item">Welcome {{user.username}}</span>
           <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
@@ -36,7 +36,7 @@
       </div>
       {% else %}
       <div class="header-out">
-        <a class="title" href="{% url 'home' %}"><strong>Disclose</strong></a>
+        <a class="title" href="{% url 'home' %}"><strong>🗺 Disclose</strong></a>
         <div class="auth">
           <a class="navbar-item" href="{% url 'login' %}">Login</a>
           <a class="navbar-item" href="{% url 'signup' %}">Sign Up</a>
