@@ -16,6 +16,7 @@ from django.conf import settings
 @method_decorator(login_required, name='dispatch')
 class Home(TemplateView):
     template_name = 'home.html'
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
         context['locations'] = Location.objects.all()
@@ -29,9 +30,10 @@ class Home(TemplateView):
 class LocationDetail(DetailView):
     model = Location
     template_name = 'location_detail.html'
+
     def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['comments'] = Comment.objects.all()
+        context = super(LocationDetail, self).get_context_data(**kwargs)
+        context['comments'] = Comment.objects.filter(location_id=self.kwargs['pk'])
         return context
 
 @method_decorator(login_required, name='dispatch')
@@ -67,7 +69,7 @@ class LocationDelete(DeleteView):
 @method_decorator(login_required, name='dispatch')
 class CommentCreate(CreateView):
     model = Comment
-    fields = ['location', 'author', 'text']
+    fields = ['location', 'user', 'comment']
     template_name = 'comment_create.html'
 
     def form_valid(self, form):
@@ -81,8 +83,9 @@ class CommentCreate(CreateView):
 @method_decorator(login_required, name='dispatch')
 class CommentUpdate(UpdateView):
     model = Comment
-    fields = ['location', 'author', 'text']
+    fields = ['location', 'user', 'comment']
     template_name = 'comment_update.html'
+
     def get_success_url(self):
         return reverse('location_detail', kwargs={'pk': self.object.location_id})
 
@@ -90,6 +93,7 @@ class CommentUpdate(UpdateView):
 class CommentDelete(DeleteView):
     model = Comment
     template_name = 'comment_delete_confirmation.html'
+
     def get_success_url(self):
         return reverse('location_detail', kwargs={'pk': self.object.location_id})
 
