@@ -51,7 +51,7 @@ form {
     text-align: center;
     text-decoration: none;
     padding: 10px;
-    background-color: rgb(101,27,148);
+    background: linear-gradient(#651B94, #8559a0);
     color: white;
 }
 
@@ -77,7 +77,7 @@ form {
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    background-color: rgb(0,148,115);
+    background: linear-gradient(#69b4a4, #009473);
     color: white;
     bottom: 0;
     padding: 5px;
