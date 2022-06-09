@@ -1,30 +1,26 @@
-{%extends 'base.html'%} 
-{%load static%} 
-{% block content %}
+{%extends 'base.html'%} {%load static%} {% block content %}
 <div class="home">
   <div class="location-list">
     <div class="search-add">
-      <input class="searchbar" type="text" placeholder="Search by state...">
+      <input class="searchbar" type="text" placeholder="Search by state..." />
       <div class="add-new-container">
         <form action="{% url 'location_create' %}">
-          <input class='add-new' type="submit" value="+"/>
+          <input class="add-new" type="submit" value="+" />
         </form>
       </div>
     </div>
     <div class="list">
       {% for location in locations %}
-      <div class="list-item">
-        <a href="/locations/{{location.id}}">
+        <a class="list-item" href="/locations/{{location.id}}">
           <div class="name">
             <h3>{{location.name}}</h3>
           </div>
           <div class="city-state">{{location.city}}, {{location.state}}</div>
           <div class="lat">{{location.lat}}</div>
           <div class="lng">{{location.lng}}</div>
-          <img class="home-img" src='{{location.img}}'/>
-          <hr>
+          <img class="home-img" src="{{location.img}}" />
+          <hr />
         </a>
-      </div>
       {% endfor %}
     </div>
   </div>
@@ -32,8 +28,8 @@
     <div id="map"></div>
   </div>
 </div>
-  <script type="text/javascript">
-    const API_KEY = "{{API_KEY | safe}}";
-    mapboxgl.accessToken = API_KEY;
-  </script>
+<script type="text/javascript">
+  const API_KEY = "{{API_KEY | safe}}";
+  mapboxgl.accessToken = API_KEY;
+</script>
 {% endblock %}

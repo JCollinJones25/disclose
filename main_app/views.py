@@ -22,14 +22,6 @@ class Home(TemplateView):
         context['API_KEY'] = settings.API_KEY
         return context
 
-
-@method_decorator(login_required, name='dispatch')
-class LocationList(TemplateView):
-    template_name = 'location_list.html'
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['locations'] = Location.objects.all()
-        return context
     
 @method_decorator(login_required, name='dispatch')
 class LocationDetail(DetailView):
@@ -39,7 +31,7 @@ class LocationDetail(DetailView):
 @method_decorator(login_required, name='dispatch')
 class LocationCreate(CreateView):
     model = Location
-    fields = ['name', 'city', 'state', 'img', 'description', 'lat', 'lng']
+    fields = ['name', 'city', 'state', 'img', 'lat', 'lng', 'description']
     template_name = 'location_create.html'
 
     def form_valid(self, form):
@@ -52,7 +44,7 @@ class LocationCreate(CreateView):
 @method_decorator(login_required, name='dispatch')
 class LocationUpdate(UpdateView):
     model = Location
-    fields = ['name', 'city', 'state', 'img', 'description', 'lat', 'lng']
+    fields = ['name', 'city', 'state', 'img', 'lat', 'lng', 'description']
     template_name = 'location_update.html'
     def get_success_url(self):
         return reverse('location_detail', kwargs={'pk': self.object.pk})
@@ -62,7 +54,7 @@ class LocationUpdate(UpdateView):
 class LocationDelete(DeleteView):
     model = Location
     template_name = 'location_delete_confirmation.html'
-    success_url = '/locations/'
+    success_url = '/'
 
 
 class Signup(View):

@@ -3,27 +3,15 @@
 {{location.name}}
 {% endblock %}
 {% block content %}
-<div class="location-detail">
-    <div class="location-text">
-        <h1>{{location.name}}</h1>
-        <h2>{{location.city}}, {{location.state}}</h2>
-        <p>{{location.description}}</p>
-        <h3>Coordinates: {{location.lat}}, {{location.lng}}</h3>
+<div class="crud_view">
+    <h1>{{location.name}}</h1>
+    <h2>{{location.city}}, {{location.state}}</h2>
+    <p>{{location.description}}</p>
+    <h3>Coordinates: {{location.lat}}, {{location.lng}}</h3>
+    <img class="location-img" src='{{location.img}}' alt='{{location.name}}'/>
+    <div class="buttons">
+        <a class='btn' id="btn-link" href="/locations/{{location.id}}/update">Edit</a>
+        <a class='btn' id="btn-link" href="/locations/{{location.id}}/delete">Delete</a>
     </div>
-    <div class="location-img">
-        <img src='{{location.img}}' alt='{{location.name}}'/>
-    </div>
-</div>
-<div class="buttons">
-    <a href="/locations/{{location.id}}/update">
-        <div class='green'>
-            Edit
-        </div>
-    </a>
-    <a href="/locations/{{location.id}}/delete">
-        <div class='red'>
-            Delete
-        </div>
-    </a>
 </div>
 {% endblock %}
