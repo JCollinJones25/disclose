@@ -182,8 +182,13 @@ input, textarea {
 .list {
     background-color: rgb(211, 211, 211, 0.5);
     overflow-y: scroll;
+    border: solid;
+    border-style: groove;
+    border-color:rgb(101, 27, 148);
+    border-width: 3px;
     height: 85%;
     margin-bottom: 10px;
+    padding: 3px;
 }
 
 .list-item {
