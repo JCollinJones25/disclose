@@ -11,6 +11,33 @@ a {
     text-decoration: none;
 }
 
+label {
+    color: white;
+}
+
+.btn {
+    background-color: rgb(101,27,148);
+    color: white;
+    border-style: groove;
+    border-radius: 15px;
+    font-size: 15px;
+    width: 65px;
+}
+
+#btn-link {
+    padding: 5px;
+    border-color: rgb(101,27,148);
+    font-size: 15px;
+    max-width: 65px;
+}
+
+input,
+form {
+    /* color: rgb(101,27,148); */
+    color: white;
+}
+
+
 .header strong {
     font-family: 'Bangers', cursive;
     font-size: 30px;
@@ -336,15 +363,29 @@ input, textarea {
     text-align: center;
 }
 
-.create_update_view {
+.crud_view {
+    display: flex;
+    justify-content: center;
     text-align: center;
-    margin-top: 75px;
+    flex-direction: column;
+    border: solid;
+    border-radius: 15px;
+    border-width: 10px;
+    border-style: groove;
+    border-color: rgb(101,27,148);
+    background-color: rgb(101,27,148, 0.5);
+    color: white;
+    width: 75%;
+    height: auto;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-bottom: 10px;
 }
 
-form {
-    color: rgb(101,27,148);
-}
 
+
+/* MOBILE */
 
 @media only screen and (max-width: 600px) {
     

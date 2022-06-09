@@ -31,7 +31,7 @@ class LocationDetail(DetailView):
 @method_decorator(login_required, name='dispatch')
 class LocationCreate(CreateView):
     model = Location
-    fields = ['name', 'city', 'state', 'img', 'description', 'lat', 'lng']
+    fields = ['name', 'city', 'state', 'img', 'lat', 'lng', 'description']
     template_name = 'location_create.html'
 
     def form_valid(self, form):
@@ -44,7 +44,7 @@ class LocationCreate(CreateView):
 @method_decorator(login_required, name='dispatch')
 class LocationUpdate(UpdateView):
     model = Location
-    fields = ['name', 'city', 'state', 'img', 'description', 'lat', 'lng']
+    fields = ['name', 'city', 'state', 'img', 'lat', 'lng', 'description']
     template_name = 'location_update.html'
     def get_success_url(self):
         return reverse('location_detail', kwargs={'pk': self.object.pk})

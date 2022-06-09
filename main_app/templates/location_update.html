@@ -1,12 +1,13 @@
 {% extends 'base.html' %}
 {%load static%}
 {% block content %}
-<div class="create_update_view">
+<div class="crud_view">
     <h1>Edit {{location.name}}</h1>
     <form method="post">
         {% csrf_token %}
         {{form.as_p}}
-        <input type="submit" value="Submit" />
+        <input class='btn' type="submit" value="Submit" />
+        <a class='btn' id='btn-link' href="/locations/{{location.id}}">Cancel</a>
     </form>
 </div>
 {% endblock%}

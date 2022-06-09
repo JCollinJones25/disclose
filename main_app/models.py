@@ -9,9 +9,9 @@ class Location(models.Model):
     city = models.CharField(max_length=200, default = 'city')
     state = models.CharField(max_length=200, default = 'state')
     img = models.CharField(max_length=700)
-    description = models.TextField(max_length=700)
     lat = models.FloatField(max_length=100, default= 37.8393)
     lng = models.FloatField(max_length=100, default=86.27)
+    description = models.TextField(max_length=700)
     user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
     
     def __str__(self):

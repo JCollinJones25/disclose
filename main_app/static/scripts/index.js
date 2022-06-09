@@ -11,8 +11,6 @@ const $name = $('.name')
 const $cityState = $('.city-state')
 
 
-console.log($lat, $lng)
-
 const map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/mapbox/satellite-streets-v11",
@@ -27,13 +25,6 @@ map.boxZoom.enable();
 
 for (let i = 0; i < $lat.length; i++){
 
-  console.log(i +1)
-  console.log($name[i].innerText)
-  console.log($lat[i].innerText)
-  console.log($lng[i].innerText)
-  console.log($img[i].src)
-  console.log('-----------')
-
   const popup = new mapboxgl.Popup({ offset: 25 }).setHTML($name[i].innerText, $img[i].src);
   const el = document.createElement('div');
   el.id = 'marker';
@@ -44,8 +35,4 @@ for (let i = 0; i < $lat.length; i++){
   .addTo(map);
 
   }
-  
-  
-  
-
 
