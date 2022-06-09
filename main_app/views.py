@@ -22,14 +22,6 @@ class Home(TemplateView):
         context['API_KEY'] = settings.API_KEY
         return context
 
-
-@method_decorator(login_required, name='dispatch')
-class LocationList(TemplateView):
-    template_name = 'location_list.html'
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-        context['locations'] = Location.objects.all()
-        return context
     
 @method_decorator(login_required, name='dispatch')
 class LocationDetail(DetailView):
