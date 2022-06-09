@@ -13,16 +13,18 @@
     </div>
     <div class="list">
       {% for location in locations %}
-      <a href="/locations/{{location.id}}">
-        <div class="name">
-          <h3>{{location.name}}</h3>
-        </div>
-        <div class="city-state">{{location.city}}, {{location.state}}</div>
-        <div class="lat">{{location.lat}}</div>
-        <div class="lng">{{location.lng}}</div>
-        <img class="home-img" src='{{location.img}}'/>
-        <hr>
-      </a>
+      <div class="list-item">
+        <a href="/locations/{{location.id}}">
+          <div class="name">
+            <h3>{{location.name}}</h3>
+          </div>
+          <div class="city-state">{{location.city}}, {{location.state}}</div>
+          <div class="lat">{{location.lat}}</div>
+          <div class="lng">{{location.lng}}</div>
+          <img class="home-img" src='{{location.img}}'/>
+          <hr>
+        </a>
+      </div>
       {% endfor %}
     </div>
   </div>

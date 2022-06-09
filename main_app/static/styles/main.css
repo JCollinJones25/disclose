@@ -8,7 +8,6 @@ body {
 }
 
 a { 
-    color: rgb(101,27,148);
     text-decoration: none;
 }
 
@@ -133,12 +132,27 @@ a {
     border: solid;
     margin-left: 5%;
     border-radius: 15px;
-    overflow-y: scroll;
     height: 500px;
     width: 25%;
     font-size: 10px;
-    padding: 5px;
+    padding: 10px;
     margin-left: 10px;
+    background-color: rgb(101,27,148);
+    color: white;
+}
+
+.list {
+    overflow-y: scroll;
+    background-color: rgb(211, 211, 211, 0.5);
+    color: white;
+    margin-top: 5px;
+}
+
+.list-item {
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
 }
 
 .add-new-container {
@@ -156,40 +170,6 @@ a {
     justify-content: center;
     margin: 5px;
     color: white;
-}
-
-
-/* Location list page */
-
-.locations {
-    padding: 20px;
-}
-
-
-.list-top {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-    color: rgb(101,27,148);
-}
-
-.list-item {
-    display: flex;
-    justify-content: space-between;
-    width: 100%;
-}
-
-.list-img-container {
-    justify-content: flex-start;
-    display: flex;
-}
-
-.list-img {
-    display: flex;
-    width: 120px;
-    height: 120px;
-    object-fit: cover;
-    margin: 15px;
 }
 
 
