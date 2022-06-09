@@ -71,7 +71,7 @@ class CommentCreate(CreateView):
         return super(CommentCreate, self).form_valid(form)
     
     def get_success_url(self):
-        return reverse('location_detail', kwargs={'pk': self.object.pk})
+        return reverse('location_detail', kwargs={'pk': self.object.location_id})
 
 @method_decorator(login_required, name='dispatch')
 class CommentUpdate(UpdateView):
@@ -79,7 +79,7 @@ class CommentUpdate(UpdateView):
     fields = ['location', 'author', 'text']
     template_name = 'comment_update.html'
     def get_success_url(self):
-        return reverse('location_detail', kwargs={'pk': self.object.pk})
+        return reverse('location_detail', kwargs={'pk': self.object.location_id})
 
 
 @method_decorator(login_required, name='dispatch')
@@ -87,7 +87,7 @@ class CommentDelete(DeleteView):
     model = Comment
     template_name = 'comment_delete_confirmation.html'
     def get_success_url(self):
-        return reverse('location_detail', kwargs={'pk': self.object.pk})
+        return reverse('location_detail', kwargs={'pk': self.object.location_id})
 
 
 
