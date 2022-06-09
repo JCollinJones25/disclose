@@ -1,4 +1,5 @@
 from django.db import models
+from django.utils import timezone
 from django.contrib.auth.models import User
 
 # Create your models here.
@@ -22,9 +23,10 @@ class Location(models.Model):
     
 
 class Comment(models.Model):
-    location = models.ForeignKey(Location, on_delete=models.CASCADE, default=1)
-    author = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
-    text = models.TextField(max_length=700)
+    location = models.ForeignKey(Location, on_delete=models.CASCADE, default=1, related_name='comments')
+    user = models.ForeignKey(User, on_delete=models.CASCADE, default=1)
+    date_posted = models.DateTimeField(default = timezone.now)
+    comment = models.TextField(max_length=700)
 
     def __str__(self):
-        return self.text
+        return self.comment

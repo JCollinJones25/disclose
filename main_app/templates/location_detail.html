@@ -19,8 +19,8 @@
         <input class="add-new" type="submit" value="+" />
     </form>
     {% for comment in comments %}
-    <h3>{{comment.author}}</h3>
-    <p>{{comment.text}}</p>
+    <h3>{{comment.user}} - {{comment.date_posted}}</h3>
+    <p>{{comment.comment}}</p>
     {% endfor %}
 </div>
 {% endblock %}

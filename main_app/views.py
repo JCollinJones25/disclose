@@ -22,6 +22,7 @@ class Home(TemplateView):
         context['API_KEY'] = settings.API_KEY
         return context
 
+
 # Location Views 
   
 @method_decorator(login_required, name='dispatch')
@@ -75,6 +76,7 @@ class CommentCreate(CreateView):
     
     def get_success_url(self):
         return reverse('location_detail', kwargs={'pk': self.object.location_id})
+
 
 @method_decorator(login_required, name='dispatch')
 class CommentUpdate(UpdateView):
