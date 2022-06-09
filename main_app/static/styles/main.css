@@ -90,9 +90,10 @@ input, textarea {
 
 .github, .linkedin {
     width: auto;
-    height: 55px;
+    height: 35px;
     margin-left: 20px;
     margin-right: 20px;
+    padding: 10px;
 }
 
 .auth {

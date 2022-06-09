@@ -3,10 +3,10 @@
 
 const $lat = $('.lat')
 const $lng = $('.lng')
-const $img = $('.home-img')
+// const $img = $('.home-img')
 $lat.hide() 
 $lng.hide() 
-$img.hide() 
+// $img.hide() 
 const $name = $('.name')
 const $cityState = $('.city-state')
 
