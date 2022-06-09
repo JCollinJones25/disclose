@@ -12,7 +12,7 @@ a {
     text-decoration: none;
 }
 
-label {
+form {
     color: white;
 }
 
@@ -42,7 +42,6 @@ input, textarea {
     padding: 5px;
     font-size: 15px;
 }
-
 
 .header strong {
     font-family: 'Bangers', cursive;
@@ -147,8 +146,14 @@ input, textarea {
 }
 
 .searchbar {
+    background-color: rgb(255, 255, 255, 0.5);
+    color: white;
     border-radius: 15px;
     width: 75%;
+}
+
+::placeholder {
+    color: white;
 }
 
 .search-add {
@@ -176,16 +181,14 @@ input, textarea {
 
 .list {
     background-color: rgb(211, 211, 211, 0.5);
-    color: white;
     overflow-y: scroll;
-    margin-top: 5px;
+    height: 85%;
+    margin-bottom: 10px;
 }
 
 .list-item {
-    display: flex;
-    justify-content: space-between;
     color: white;
-    width: 100%;
+    font-size: 15px;
 }
 
 .add-new-container {

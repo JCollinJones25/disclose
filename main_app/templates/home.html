@@ -11,8 +11,7 @@
     </div>
     <div class="list">
       {% for location in locations %}
-      <div class="list-item">
-        <a href="/locations/{{location.id}}">
+        <a class="list-item" href="/locations/{{location.id}}">
           <div class="name">
             <h3>{{location.name}}</h3>
           </div>
@@ -22,7 +21,6 @@
           <img class="home-img" src="{{location.img}}" />
           <hr />
         </a>
-      </div>
       {% endfor %}
     </div>
   </div>
