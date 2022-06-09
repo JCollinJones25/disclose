@@ -22,7 +22,8 @@ class Home(TemplateView):
         context['API_KEY'] = settings.API_KEY
         return context
 
-    
+# Location Views 
+  
 @method_decorator(login_required, name='dispatch')
 class LocationDetail(DetailView):
     model = Location
@@ -60,6 +61,8 @@ class LocationDelete(DeleteView):
     success_url = '/'
 
 
+# Comment Views  
+
 @method_decorator(login_required, name='dispatch')
 class CommentCreate(CreateView):
     model = Comment
@@ -81,7 +84,6 @@ class CommentUpdate(UpdateView):
     def get_success_url(self):
         return reverse('location_detail', kwargs={'pk': self.object.location_id})
 
-
 @method_decorator(login_required, name='dispatch')
 class CommentDelete(DeleteView):
     model = Comment
@@ -90,7 +92,7 @@ class CommentDelete(DeleteView):
         return reverse('location_detail', kwargs={'pk': self.object.location_id})
 
 
-
+# Signup View
 
 class Signup(View):
     def get(self, request):
