@@ -2,6 +2,7 @@
 - Mapbox API - [https://docs.mapbox.com/api/overview/](https://docs.mapbox.com/api/overview/)
 
 ## TODO
+- list window border 
 - comment model
 - user relationships with comments
 - user relationships with editing and deleting
