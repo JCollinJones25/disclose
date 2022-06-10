@@ -2,13 +2,13 @@
 - Mapbox API - [https://docs.mapbox.com/api/overview/](https://docs.mapbox.com/api/overview/)
 
 ## TODO
-fix pk bug
-deploy heroku
-user permissions with editing and deleting other user data
-search bar functionality
-data entry and cleanup
-finishing touches
-styles and animations
+- fix pk bug
+- deploy heroku
+- user permissions with editing and deleting other user data
+- search bar functionality
+- data entry and cleanup
+- finishing touches
+- styles and animations
 
 ## Technologies Used
 Django, PostgreSQL, Python, Javascript, HTML, CSS, CSS Flexbox, Mapbox API
