@@ -5,7 +5,11 @@
     <h1>Edit this comment</h1>
     <form method="post">
         {% csrf_token %}
-        {{form.as_p}}
+        <div class="hide-form">
+            {{form.location}}
+            {{form.user}}
+        </div>
+        {{form.comment}}
         <input class='btn' type="submit" value="Submit" />
         <a class='btn' id='btn-link' href="/locations/{{location.id}}">Cancel</a>
     </form>
