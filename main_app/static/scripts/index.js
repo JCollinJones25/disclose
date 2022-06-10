@@ -13,7 +13,7 @@ const $cityState = $('.city-state')
 
 const map = new mapboxgl.Map({
   container: "map",
-  style: "mapbox://styles/mapbox/satellite-streets-v11",
+  style: "mapbox://styles/jcollinjones25/cl48xejs4000x15o2ccw48f1y",
   center: [-84.5, 30],
   zoom: 2,
 });
