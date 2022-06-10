@@ -10,6 +10,7 @@ from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
 from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
+from django.template import RequestContext
 from django.conf import settings
 
 
@@ -49,6 +50,7 @@ class LocationCreate(CreateView):
     
     def get_success_url(self):
         return reverse('location_detail', kwargs={'pk': self.object.pk})
+
 
 @method_decorator(login_required, name='dispatch')
 class LocationUpdate(UpdateView):
