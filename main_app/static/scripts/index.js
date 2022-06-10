@@ -29,7 +29,7 @@ for (let i = 0; i < $lat.length; i++){
   const el = document.createElement('div');
   el.id = 'marker';
 
-  const marker = new mapboxgl.Marker({color: '#0090D6'})
+  const marker = new mapboxgl.Marker({color: '#5fa7ef'})
   .setLngLat([$lng[i].innerText, $lat[i].innerText])
   .setPopup(popup) 
   .addTo(map);

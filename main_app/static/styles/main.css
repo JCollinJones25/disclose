@@ -1,50 +1,50 @@
+/* 
+colors
+blue
+#5fa7ef
+tan
+#F8D7BD
+text
+rgb(50, 50, 50)
+*/
 
 /* GLOBAL */
 
 body {
-    background-color: lightgrey;
-    color: rgb(101,27,148);
-    font-family: 'Inconsolata', monospace;
+    background-color: white;
+    color: rgb(50, 50, 50);
+    font-family: 'Mukta', sans-serif;
     margin: 0;
 }
 
 a { 
     text-decoration: none;
-}
-
-form {
-    color: white;
+    color: #5fa7ef;
 }
 
 .btn {
-    background-color: rgb(101,27,148);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #5fa7ef;
     color: white;
-    border-style: groove;
+    border: solid;
     border-radius: 15px;
-    font-size: 15px;
-    width: 65px;
-    margin: 10px;
-}
-
-#btn-link {
-    padding: 5px;
-    border-color: rgb(101,27,148);
-    font-size: 15px;
-    max-width: 65px;
+    width: 70px;
+    height: 45px;
     margin: 10px;
 }
 
 input, textarea {
-    background-color: rgb(101, 27, 148);
-    color: white;
-    font-family: 'Inconsolata', monospace;
-    border-color: rgb(101,27,148);
+    background-color: rgba(216, 216, 216, 0.5);
     padding: 5px;
     font-size: 15px;
+    border-width: 1px;
+    border-color: lightgrey;
 }
 
 .header strong {
-    font-family: 'Bangers', cursive;
+    font-family: 'Mukta', sans-serif;
     font-size: 30px;
     margin-left: 20px;
 }
@@ -55,7 +55,7 @@ input, textarea {
     align-items: center;
     text-align: center;
     text-decoration: none;
-    background: linear-gradient(#651B94, #8559a0);
+    background-color: #5fa7ef;
     color: white;
     padding: 10px;
 }
@@ -73,16 +73,11 @@ input, textarea {
     color: white;
 }
 
-.header-out a {
-    color: rgb(101,27,148);
-}
-
 .footer {
     display: flex;
-    justify-content: center;
+    justify-content: right;
     align-items: center;
     text-decoration: none;
-    background: linear-gradient(#69b4a4, #009473);
     color: white;
     bottom: 0;
     padding: 5px;
@@ -90,9 +85,9 @@ input, textarea {
 
 .github, .linkedin {
     width: auto;
-    height: 35px;
-    margin-left: 20px;
-    margin-right: 20px;
+    height: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
     padding: 10px;
 }
 
@@ -103,12 +98,21 @@ input, textarea {
     text-align: right;
     flex-direction: row;
     flex-wrap: nowrap;
+    color: white;
     width: 75%;
     height: 55px;
+    font-size: 20px;
 } 
 
 .navbar-item {
     margin: 10px;
+}
+
+#sign-up {
+    background-color: #5fa7ef;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
 }
 
 
@@ -125,8 +129,6 @@ input, textarea {
 }
 
 #map {
-    border-color:rgb(101,27,148);
-    border: solid;
     height: 100%;
     width: 90%;
     border-width: 2px;
@@ -147,14 +149,14 @@ input, textarea {
 }
 
 .searchbar {
-    background-color: rgb(255, 255, 255, 0.5);
-    color: white;
+    background-color: white;
+    color: grey;
     border-radius: 15px;
     width: 75%;
 }
 
 ::placeholder {
-    color: white;
+    color: black;
 }
 
 .search-add {
@@ -168,8 +170,8 @@ input, textarea {
 .location-list {
     display: flex;
     flex-direction: column;
-    background-color: rgb(101,27,148);
-    color: white;
+    color: grey;
+    background-color: lightgrey;
     border: solid;
     margin-left: 5%;
     border-radius: 15px;
@@ -181,11 +183,10 @@ input, textarea {
 }
 
 .list {
-    background-color: rgb(211, 211, 211, 0.5);
+    background-color: white;
     overflow-y: scroll;
     border: solid;
     border-style: groove;
-    border-color:rgb(101, 27, 148);
     border-width: 3px;
     height: 85%;
     margin-bottom: 10px;
@@ -193,7 +194,7 @@ input, textarea {
 }
 
 .list-item {
-    color: white;
+    color: #5fa7ef;
     font-size: 15px;
 }
 
@@ -206,7 +207,7 @@ input, textarea {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #009473;
+    background-color: #5fa7ef;
     color: white;
     width: 30px;
     height: 30px;
@@ -225,12 +226,7 @@ input, textarea {
     flex-direction: column;
     border: solid;
     border-radius: 15px;
-    border-width: 10px;
-    border-style: groove;
-    border-color: rgb(101,27,148);
-    background-color: rgb(101,27,148, 0.5);
-    color: white;
-    width: 75%;
+    width: 85%;
     height: auto;
     min-height: 500px;
     margin: auto;
@@ -251,9 +247,6 @@ input, textarea {
     margin: auto;
     border: solid;
     border-radius: 15px;
-    border-width: 10px;
-    border-style: groove;
-    border-color: rgb(101,27,148);
 }
 
 .buttons {
@@ -307,16 +300,24 @@ input, textarea {
 .login-form {
     display: flex;
     flex-direction: column;
-    padding: 75px;
+    padding: 65px;
     border: solid;
     border-radius: 25px;
-    border-color: rgb(101,27,148);
-    background-color: rgb(211, 211, 211, 0.5);
+    border-color: rgb(211, 211, 211);
+    background-color: rgb(95, 167, 239, 0.8);
     z-index: 1;
     max-width: 400px;
     max-height: 500px;
-    margin-top: 10%;
+    margin-top: 75px;
     margin-right: 10%;
+}
+
+.login-form .title {
+    color: white;
+}
+
+.login-form a {
+    color: white;
 }
 
 .login-form-container{
@@ -331,8 +332,8 @@ input, textarea {
     flex-direction: column;
     border: solid;
     border-radius: 25px;
-    border-color: rgb(101,27,148);
-    background-color: rgb(211, 211, 211, 0.5);
+    border-color: rgb(211, 211, 211);
+    background-color: rgb(95, 167, 239, 0.8);
     padding: 5%;
     z-index: 1;
     max-width: 400px;
@@ -340,6 +341,11 @@ input, textarea {
     margin-top: 5%;
     margin-right: 10%;
 }
+
+.signup-form .title {
+    color: white;
+}
+
 
 
 /* MOBILE */

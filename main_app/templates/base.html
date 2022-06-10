@@ -8,9 +8,9 @@
     <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@200&display=swap" rel="stylesheet"> 
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Mukta:wght@200&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <!-- mapbox -->
     <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.css' rel='stylesheet' />
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.8.1/mapbox-gl.js'></script>
@@ -28,7 +28,7 @@
     <div class="header">
       {% if user.is_authenticated %}
       <div class="header-in">
-        <a class="title" href="{% url 'home' %}"><strong>🗺 Disclose</strong></a>
+        <a class="title" href="{% url 'home' %}"><strong>Disclose</strong></a>
         <div class="auth">
           <span class="navbar-item">Welcome {{user.username}}</span>
           <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
@@ -36,10 +36,10 @@
       </div>
       {% else %}
       <div class="header-out">
-        <a class="title" href="{% url 'home' %}"><strong>🗺 Disclose</strong></a>
+        <a class="title" href="{% url 'home' %}"><strong>Disclose</strong></a>
         <div class="auth">
           <a class="navbar-item" href="{% url 'login' %}">Login</a>
-          <a class="navbar-item" href="{% url 'signup' %}">Sign Up</a>
+          <a class="navbar-item" id="sign-up" href="{% url 'signup' %}">Sign Up</a>
         </div>
       </div>
     </div>

@@ -6,8 +6,10 @@
     <form method="post">
         {% csrf_token %}
         {{form.as_p}}
-        <input class='btn' type="submit" value="Submit" />
-        <a class='btn' id='btn-link' href="/locations/{{location.id}}">Cancel</a>
+        <div class="buttons">
+            <input class='btn' type="submit" value="Submit" />
+            <a class='btn' id='btn-link' href="{/locations/{{location.id}}}">Cancel</a>
+        </div>
     </form>
 </div>
 {% endblock%}
