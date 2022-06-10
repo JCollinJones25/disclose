@@ -10,7 +10,7 @@ python-dotenv = "*"
 django-on-heroku = "*"
 whitenoise = "*"
 gunicorn = "*"
-environ = "*"
+django-environ = "*"
 
 [dev-packages]
 
