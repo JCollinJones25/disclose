@@ -2,7 +2,6 @@
 - Mapbox API - [https://docs.mapbox.com/api/overview/](https://docs.mapbox.com/api/overview/)
 
 ## TODO
-- deploy heroku
 - user permissions with editing and deleting other user data
 - search bar functionality
 - data entry and cleanup
