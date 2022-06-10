@@ -7,6 +7,8 @@ const $lng = $('.lng')
 $lat.hide() 
 $lng.hide() 
 // $img.hide() 
+const $hideForm = $('.hide-form')
+$hideForm.hide()
 const $name = $('.name')
 const $cityState = $('.city-state')
 

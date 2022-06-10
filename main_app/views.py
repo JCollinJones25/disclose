@@ -13,6 +13,7 @@ from django.utils.decorators import method_decorator
 from django.conf import settings
 
 
+
 @method_decorator(login_required, name='dispatch')
 class Home(TemplateView):
     template_name = 'home.html'
@@ -79,6 +80,11 @@ class CommentCreate(CreateView):
     def get_success_url(self):
         return reverse('location_detail', kwargs={'pk': self.object.location_id})
 
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['locations'] = Location.objects.all()
+        return context
+    
 
 @method_decorator(login_required, name='dispatch')
 class CommentUpdate(UpdateView):
