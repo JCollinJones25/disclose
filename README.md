@@ -8,7 +8,7 @@
 - search bar functionality
 - data entry and cleanup
 - finishing touches
-- styles and animations
+- styles
 
 ## Technologies Used
 Django, PostgreSQL, Python, Javascript, HTML, CSS, CSS Flexbox, Mapbox API
