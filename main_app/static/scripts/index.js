@@ -3,10 +3,8 @@
 
 const $lat = $('.lat')
 const $lng = $('.lng')
-// const $img = $('.home-img')
 $lat.hide() 
 $lng.hide() 
-// $img.hide() 
 const $hideForm = $('.hide-form')
 $hideForm.hide()
 const $name = $('.name')
