@@ -1,4 +1,4 @@
-from django.http import Http404
+from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.views import View
 from django.views.generic.base import TemplateView
@@ -29,10 +29,7 @@ class Home(TemplateView):
 
 # Location Views 
 
-@method_decorator(login_required, name='dispatch')
-class LocationSearch(TemplateView):
-    model = Location
-    template_name = 'location_search.html'
+
 
   
 @method_decorator(login_required, name='dispatch')
@@ -75,6 +72,18 @@ class LocationDelete(DeleteView):
     model = Location
     template_name = 'location_delete_confirmation.html'
     success_url = '/'
+
+
+@method_decorator(login_required, name='dispatch')
+class LocationSearch(TemplateView):
+    
+    def post(self, request, *args, **kwargs):
+        if request.method == 'POST':
+            searchbar = request.POST['searchbar']
+            return render(request, 'location_search.html', {'searchbar': searchbar})
+        else:
+            return render(request, 'location_search.html', {})
+
 
 
 # Comment Views  

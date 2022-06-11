@@ -1,0 +1,10 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+{% if searchbar %}
+    <h1>Search results for '{{ searchbar }}'</h1>
+
+{% endif %}
+
+{% endblock %}
