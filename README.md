@@ -2,7 +2,6 @@
 - Mapbox API - [https://docs.mapbox.com/api/overview/](https://docs.mapbox.com/api/overview/)
 
 ## TODO
-- style buttons back to what they were
 - timezone wrong
 - user permissions with editing and deleting other user data
 - search bar functionality

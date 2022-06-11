@@ -6,8 +6,10 @@
       <h1 class="title">Log In</h1>
       <form method="post" action="{% url 'login' %}">
         {% csrf_token %} {{ form.as_p }}
-        <input type="submit" class="btn" value="Login" />
-        <input type="hidden" name="next" value="{{ next }}" />
+        <div class="buttons">
+          <input type="submit" class="btn" value="Login" />
+          <input type="hidden" name="next" value="{{ next }}" />
+        </div>
         <h3>Don't have an account? <a href="{% url 'signup' %}">Sign Up</a></h3>
       </form>
     </div>

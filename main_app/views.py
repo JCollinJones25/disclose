@@ -1,3 +1,4 @@
+from django.http import Http404
 from django.shortcuts import render
 from django.views import View
 from django.views.generic.base import TemplateView
@@ -8,9 +9,9 @@ from django.shortcuts import redirect, render
 from .models import Location, Comment
 from django.contrib.auth import login
 from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.decorators import login_required
+from django.contrib.auth.decorators import login_required, permission_required
 from django.utils.decorators import method_decorator
-from django.template import RequestContext
+from django.core.exceptions import PermissionDenied
 from django.conf import settings
 
 
@@ -57,8 +58,10 @@ class LocationUpdate(UpdateView):
     model = Location
     fields = ['name', 'city', 'state', 'img', 'lat', 'lng', 'description']
     template_name = 'location_update.html'
+
     def get_success_url(self):
         return reverse('location_detail', kwargs={'pk': self.object.pk})
+    
 
 @method_decorator(login_required, name='dispatch')
 class LocationDelete(DeleteView):
