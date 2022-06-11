@@ -4,6 +4,10 @@
 
 {% if searchbar %}
     <h1>Search results for '{{ searchbar }}'</h1>
+    <br/>
+    {% for location in locations %}
+        {{location}}
+    {% endfor %}
 
 {% endif %}
 

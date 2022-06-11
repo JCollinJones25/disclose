@@ -80,7 +80,8 @@ class LocationSearch(TemplateView):
     def post(self, request, *args, **kwargs):
         if request.method == 'POST':
             searchbar = request.POST['searchbar']
-            return render(request, 'location_search.html', {'searchbar': searchbar})
+            locations = Location.objects.filter(name__icontains=searchbar)
+            return render(request, 'location_search.html', {'searchbar': searchbar, 'locations':locations})
         else:
             return render(request, 'location_search.html', {})
 
