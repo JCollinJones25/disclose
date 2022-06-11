@@ -2,10 +2,10 @@
 - Mapbox API - [https://docs.mapbox.com/api/overview/](https://docs.mapbox.com/api/overview/)
 
 ## TODO
-- search bar functionality
 - user permissions with editing and deleting other user data
 - data entry and cleanup
 - timezone hour behind
+- comment data model
 - finishing touches
 - styles
 

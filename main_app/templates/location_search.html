@@ -1,0 +1,26 @@
+{%extends 'base.html'%}
+{% load static %}
+{% block content %}
+
+{% if searchbar %}
+    <div class="searchpage">
+        <h2>Search results for '{{ searchbar }}'</h2>
+        <hr>
+        <br/>
+        <div class="searchlist">
+            {% for location in locations %}
+            <div class="search-list-item">
+                <div class="search-img">
+                    <img class="list-img" src='{{location.img}}' alt="'{{location.name}}"/>
+                </div>
+                <div class="search-text">
+                    <a href="{% url 'location_detail' location.pk %}"><h3>{{location.name}}</h3></a>
+                    <p>{{location.city}}, {{location.state}}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+{% endif %}
+
+{% endblock %}
