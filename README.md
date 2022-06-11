@@ -2,10 +2,10 @@
 - Mapbox API - [https://docs.mapbox.com/api/overview/](https://docs.mapbox.com/api/overview/)
 
 ## TODO
-- timezone wrong
-- user permissions with editing and deleting other user data
 - search bar functionality
+- user permissions with editing and deleting other user data
 - data entry and cleanup
+- timezone hour behind
 - finishing touches
 - styles
 
