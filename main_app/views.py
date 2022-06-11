@@ -28,6 +28,12 @@ class Home(TemplateView):
 
 
 # Location Views 
+
+@method_decorator(login_required, name='dispatch')
+class LocationSearch(TemplateView):
+    model = Location
+    template_name = 'location_search.html'
+
   
 @method_decorator(login_required, name='dispatch')
 class LocationDetail(DetailView):

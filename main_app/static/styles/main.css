@@ -22,6 +22,10 @@ a {
     color: #5fa7ef;
 }
 
+hr {
+    color: white;
+}
+
 .btn {
     display: flex;
     justify-content: center;
@@ -124,8 +128,8 @@ input, textarea {
     justify-content: center;
     align-items: center;
     flex-wrap: nowrap;
-    margin-top: 40px;
-    margin-bottom: 40px;
+    margin-top: 10px;
+    margin-bottom: 20px;
 }
 
 #map {
@@ -148,29 +152,26 @@ input, textarea {
     text-align: center;
 }
 
-.searchbar {
-    background-color: white;
-    color: grey;
-    border-radius: 15px;
-    width: 75%;
-}
-
-::placeholder {
-    color: black;
-}
-
-.search-add {
+.search {
     display: flex;
-    justify-content: center;
-    flex-direction: row;
+    justify-content: right;
     margin: auto;
+    margin-top: 15px;
     width: 100%;
 }
+
+.searchbar {
+    background-color: white;
+    border-radius: 5px;
+    width: 300px;
+    margin-right: 50px;
+    padding: 5px;
+}
+
 
 .location-list {
     display: flex;
     flex-direction: column;
-    color: grey;
     background-color: lightgrey;
     border: solid;
     margin-left: 5%;

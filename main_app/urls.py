@@ -5,6 +5,7 @@ urlpatterns = [
 
     # location
     path('', views.Home.as_view(), name="home"),
+    path('locations/search/', views.LocationSearch.as_view(), name='location_search'),
     path('locations/new/', views.LocationCreate.as_view(), name='location_create'),
     path('locations/<int:pk>', views.LocationDetail.as_view(), name="location_detail"),
     path('locations/<int:pk>/update', views.LocationUpdate.as_view(), name='location_update'),

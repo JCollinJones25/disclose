@@ -1,13 +1,13 @@
 {%extends 'base.html'%} {%load static%} {% block content %}
+<div class="search">
+  <input class="searchbar" type="text" placeholder="Search..." />
+</div>
 <div class="home">
   <div class="location-list">
-    <div class="search-add">
-      <input class="searchbar" type="text" placeholder="Search..." />
-      <div class="add-new-container">
-        <form action="{% url 'location_create' %}">
-          <input class="add-new" type="submit" value="+" />
-        </form>
-      </div>
+    <div class="add-new-container">
+      <form action="{% url 'location_create' %}">
+        <input class="add-new" type="submit" value="+" />
+      </form>
     </div>
     <div class="list">
       {% for location in locations %}
