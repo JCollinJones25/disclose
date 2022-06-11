@@ -37,6 +37,7 @@ class LocationDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super(LocationDetail, self).get_context_data(**kwargs)
         context['comments'] = Comment.objects.filter(location_id=self.kwargs['pk'])
+        print(self.kwargs)
         return context
 
 @method_decorator(login_required, name='dispatch')
@@ -79,7 +80,7 @@ class CommentCreate(CreateView):
     template_name = 'comment_create.html'
 
     def form_valid(self, form):
-        form.instance.user = self.request.user
+        form.instance.location_id = self.kwargs['pk']
         return super(CommentCreate, self).form_valid(form)
     
     def get_success_url(self):
