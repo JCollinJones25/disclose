@@ -13,7 +13,7 @@ Disclose is a social media platform that caters to the 'urban explorer' crowd. I
 - As a user I want to be able to edit and delete my locations.
 - As a user I want to see locations other people post onto the map.
 - As a user I want to be able to read the details of all locations.
-- As a user I want to be able to comment on others posts.
+- As a user I want to be able to comment on other users posts.
 
 ## Wireframe
 ![wireframe](https://github.com/JCollinJones25/disclose/blob/main/images/wireframe.png?raw=true)
@@ -23,7 +23,7 @@ Disclose is a social media platform that caters to the 'urban explorer' crowd. I
 
 ## MVP Goals ✅
 - CRUD functionality with PostgresQL database
-- Get map to render 
+- Map
 - Styling
 
 ## Stretch Goals
