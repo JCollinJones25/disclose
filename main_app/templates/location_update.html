@@ -8,7 +8,7 @@
         {{form.as_p}}
         <div class="buttons">
             <input class='btn' type="submit" value="Submit" />
-            <a class='btn' id='btn-link' href="{/locations/{{location.id}}}">Cancel</a>
+            <a class='btn' id='btn-link' href="{% url 'location_detail' location.pk %}">Cancel</a>
         </div>
     </form>
 </div>
