@@ -664,14 +664,10 @@ input, textarea {
     }
 
     .buttons input {
-        width: 70px;
-        height: 30px;
         padding: 10px;
     }
 
     .buttons .btn {
-        width: 70px;
-        height: 30px;
         padding: 0px;
     }
 
