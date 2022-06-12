@@ -496,6 +496,11 @@ input, textarea {
     width: 35%;
 }
 
+.profile-pic {
+    width: 100px;
+    height: 100px;
+}
+
 
 
 /* MOBILE */
