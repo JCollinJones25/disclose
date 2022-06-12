@@ -134,23 +134,3 @@ class Signup(View):
         else:
             context = {"form": form}
             return render(request, "registration/signup.html", context)
-
-class ProfileEditView(UpdateView):
-
-    def get(self, request):
-        form = UserChangeForm()
-        context = {"form": form}
-        return render(request, "registration/profile.html", context)
-
-    def post(self, request):
-        form = UserChangeForm(request.POST)
-        if form.is_valid():
-            user = form.save()
-            login(request, user)
-            return redirect("home")
-        else:
-            context = {"form": form}
-            return render(request, "registration/profile.html", context)
-            
-    def get_object(self):
-        return self.request.user
