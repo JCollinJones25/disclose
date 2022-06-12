@@ -36,7 +36,12 @@ Disclose is a social media platform that caters to the 'urban explorer' crowd. I
 - User permissions
 
 ## Future Goals
-Many features on my site would be better implemented using a component based framework such as React so that things such as the comments or the search results can be rendered on the page without going to a new url or refreshing the browser.
+
+- Many features on my site would be better implemented using a component based framework such as React so that things such as the comments or the search results can be rendered on the page without going to a new url or refreshing the browser.
+
+- Did not get around to specifying user permissions so users can only update or delete their own locations or comments.
+
+- I would have really liked to style the forms with crispy forms but I could not get that installed.
 
 ## Screenshots
 
