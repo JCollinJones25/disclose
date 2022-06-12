@@ -2,6 +2,7 @@
 - Mapbox API - [https://docs.mapbox.com/api/overview/](https://docs.mapbox.com/api/overview/)
 
 ## TODO
+- profile page
 - user permissions with editing and deleting other user data
 - data entry and cleanup
 - timezone hour behind
