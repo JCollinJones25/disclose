@@ -1,23 +1,36 @@
-{%extends 'base.html'%}
-{% block content %}
+{%extends 'base.html'%} {% block content %}
 <div class="crud_view">
-    <h1>{{location.name}}</h1>
-    <h2>{{location.city}}, {{location.state}}</h2>
-    <p>{{location.description}}</p>
-    <h3>Coordinates: {{location.lat}}, {{location.lng}}</h3>
-    <img class="location-img" src='{{location.img}}' alt='{{location.name}}'/>
-    <div class="buttons">
-        <a class='btn' id="btn-link" href="/locations/{{location.id}}/update">Edit</a>
-        <a class='btn' id="btn-link" href="/locations/{{location.id}}/delete">Delete</a>
-    </div>
+  <h1>{{location.name}}</h1>
+  <h2>{{location.city}}, {{location.state}}</h2>
+  <h3>Coordinates: {{location.lat}}, {{location.lng}}</h3>
+  <p>{{location.description}}</p>
+  <img class="location-img" src="{{location.img}}" alt="{{location.name}}" />
+  <div class="buttons">
+    <a class="btn" id="btn-link" href="/locations/{{location.id}}/update"
+      >Edit</a
+    >
+    <a class="btn" id="btn-link" href="/locations/{{location.id}}/delete"
+      >Delete</a
+    >
+  </div>
 </div>
-<div class="comments">
+<div class="comments-container">
+  <div class="add-new-comment">
     <form action="{% url 'comment_create' location.pk %}">
-        <input class="add-new" type="submit" value="+" />
+      <input class="add-new" type="submit" value="+" />
     </form>
+    <p>Add a comment</p>
+  </div>
+  <div class="comments">
     {% for comment in comments %}
-    <h3>{{comment.user}} - {{comment.date_posted}}</h3>
-    <p>{{comment.comment}}</p>
+    <div class="comment">
+      <div class="comment-header">
+        <h3>{{comment.user}}</h3>
+        <p>{{comment.date_posted}}</p>
+      </div>
+      <p>{{comment.comment}}</p>
+    </div>
     {% endfor %}
+  </div>
 </div>
 {% endblock %}

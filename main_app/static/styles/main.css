@@ -106,6 +106,7 @@ input, textarea {
     border-top: solid;
     border-color: lightgrey;
     background-color: #f1f1f1;
+    border-width: 1px;
 }
 
 .github, .linkedin {
@@ -301,6 +302,9 @@ input, textarea {
     justify-content: center;
     text-align: center;
     flex-direction: column;
+    background-color: #f1f1f1;
+    border-color: lightgrey;
+    border-width: 1px;
     border: solid;
     border-radius: 15px;
     width: 85%;
@@ -351,6 +355,46 @@ input, textarea {
     margin: 5px;
     color: white;
 }
+
+.comments-container {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    background-color: #f1f1f1;
+    border-color: lightgrey;
+    width: 90%;
+    height: 300px;
+    padding: 10px;
+    border: solid;
+    border-radius: 15px;
+    margin-bottom: 20px;
+}
+
+.comments {
+    border-top: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+    overflow-y: scroll;
+}
+
+.comment {
+    border-bottom: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+}
+
+.add-new-comment {
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+}
+
 
 
 /* LOGIN */
