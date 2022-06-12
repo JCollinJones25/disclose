@@ -15,7 +15,7 @@ const map = new mapboxgl.Map({
   container: "map",
   style: "mapbox://styles/jcollinjones25/cl48xejs4000x15o2ccw48f1y",
   center: [-84.5, 30],
-  zoom: 2,
+  zoom: 3,
 });
 
 map.scrollZoom.enable({around: 'mouse'});
