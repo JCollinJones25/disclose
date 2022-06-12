@@ -47,5 +47,9 @@ Disclose is a social media platform that caters to the 'urban explorer' crowd. I
 
 ## Screenshots
 
-
-
+![login](https://github.com/JCollinJones25/disclose/blob/main/images/login.png)
+![home](https://github.com/JCollinJones25/disclose/blob/main/images/home.png)
+![location](https://github.com/JCollinJones25/disclose/blob/main/images/location.png)
+![comment-section](https://github.com/JCollinJones25/disclose/blob/main/images/comment-section.png)
+![comment](https://github.com/JCollinJones25/disclose/blob/main/images/comment.png)
+![search](https://github.com/JCollinJones25/disclose/blob/main/images/search.png)
