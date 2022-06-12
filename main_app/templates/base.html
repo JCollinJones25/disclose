@@ -31,6 +31,7 @@
         <a class="title" href="{% url 'home' %}"><strong>Disclose</strong></a>
         <div class="auth">
           <span class="navbar-item">Welcome {{user.username}}</span>
+          <a class="navbar-item" href="{% url 'profile' %}">Profile</a>
           <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
         </div>
       </div>

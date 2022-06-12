@@ -41,7 +41,6 @@ Disclose is a social media platform that caters to the 'urban explorer' crowd. I
 
 - Did not get around to specifying user permissions so users can only update or delete their own locations or comments.
 
-- I would have really liked to style the forms with crispy forms but I could not get that installed.
 
 ## Screenshots
 

@@ -1,4 +1,3 @@
-from django.http import HttpResponseRedirect
 from django.shortcuts import render
 from django.views import View
 from django.views.generic.base import TemplateView
@@ -8,10 +7,9 @@ from django.urls import reverse
 from django.shortcuts import redirect, render
 from .models import Location, Comment
 from django.contrib.auth import login
-from django.contrib.auth.forms import UserCreationForm
-from django.contrib.auth.decorators import login_required, permission_required
+from django.contrib.auth.forms import UserCreationForm, UserChangeForm
+from django.contrib.auth.decorators import login_required
 from django.utils.decorators import method_decorator
-from django.core.exceptions import PermissionDenied
 from django.conf import settings
 
 
@@ -40,7 +38,6 @@ class LocationDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super(LocationDetail, self).get_context_data(**kwargs)
         context['comments'] = Comment.objects.filter(location_id=self.kwargs['pk'])
-        print(self.kwargs)
         return context
 
 @method_decorator(login_required, name='dispatch')
@@ -137,3 +134,23 @@ class Signup(View):
         else:
             context = {"form": form}
             return render(request, "registration/signup.html", context)
+
+class ProfileEditView(UpdateView):
+
+    def get(self, request):
+        form = UserChangeForm()
+        context = {"form": form}
+        return render(request, "registration/profile.html", context)
+
+    def post(self, request):
+        form = UserChangeForm(request.POST)
+        if form.is_valid():
+            user = form.save()
+            login(request, user)
+            return redirect("home")
+        else:
+            context = {"form": form}
+            return render(request, "registration/profile.html", context)
+            
+    def get_object(self):
+        return self.request.user

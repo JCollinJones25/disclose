@@ -312,6 +312,19 @@ input, textarea {
     padding-left: 25px;
 }
 
+.custom-form form {
+    display: flex;
+    justify-content: center;
+}
+
+.name-city-state {
+    margin: 10px;
+}
+
+.img-coords {
+    margin: 10px;
+}
+
 .location-img {
     width: 400px;
     max-height: 400px;
@@ -458,6 +471,36 @@ input, textarea {
     color: white;
 }
 
+.profile {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    border: solid;
+    border-radius: 15px;
+    border-color: lightgrey;
+    border-width: 1px;
+    width: 85%;
+    height: auto;
+    min-height: 500px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+.profile input {
+    width: 35%;
+}
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+}
+
 
 
 /* MOBILE */
@@ -576,6 +619,24 @@ input, textarea {
     .searchbar {
         width: 85%;
         font-size: 15px;
+    }
+
+    .header strong{
+        font-size: 20px;
+        margin-left: 0;
+    }
+
+    .header .auth{
+        font-size: 10px;
+    }
+
+    .header-in {
+        margin: 0;
+    }
+
+    .login-form {
+        padding: 5px;
+        font-size: 12px;
     }
 
 }
