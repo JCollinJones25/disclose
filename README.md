@@ -1,15 +1,6 @@
 # Disclose
 - Mapbox API - [https://docs.mapbox.com/api/overview/](https://docs.mapbox.com/api/overview/)
 
-## TODO
-- profile page
-- user permissions with editing and deleting other user data
-- data entry and cleanup
-- timezone hour behind
-- comment data model
-- finishing touches
-- styles
-
 ## Technologies Used
 Django, PostgreSQL, Python, Javascript, HTML, CSS, CSS Flexbox, Mapbox API
 
@@ -38,13 +29,13 @@ Disclose is a social media platform that caters to the 'urban explorer' crowd. I
 - AUTH ✅
 - Display location data on map ✅
 - Map markers have pop up window with location info ✅
-- Users can only update and/or delete data they created (with their user id)
-- profile page (profile pic, change password)
-- Add comment data model
-- Search bar
-- Animations
+- Add comment model ✅
+- Search bar ✅
+- Profile page 
+- User permissions
 
 ## Future Goals
+Many features on my site would be better implemented using a component based framework such as React so that things such as the comments or the search results can be rendered on the page without going to a new url or refreshing the browser.
 
 ## Screenshots
 
