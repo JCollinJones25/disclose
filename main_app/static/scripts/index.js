@@ -10,10 +10,30 @@ $hideForm.hide()
 const $name = $('.name')
 const $cityState = $('.city-state')
 
+/*
+
+map styles
+
+satellite streets
+mapbox://styles/jcollinjones25/cl4ara6dv008z14nxivuupc01
+
+monochrome blue
+mapbox://styles/jcollinjones25/cl48x8psb000t14qhzw2l72ql
+
+monochrome white
+mapbox://styles/jcollinjones25/cl48xejs4000x15o2ccw48f1y
+
+moncrhome black
+mapbox://styles/jcollinjones25/cl48xct8z002p14nxty03g7jg
+
+
+*/
+
+
 
 const map = new mapboxgl.Map({
   container: "map",
-  style: "mapbox://styles/jcollinjones25/cl48xejs4000x15o2ccw48f1y",
+  style: "mapbox://styles/jcollinjones25/cl48x8psb000t14qhzw2l72ql",
   center: [-84.5, 30],
   zoom: 3,
 });
