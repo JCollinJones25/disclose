@@ -313,6 +313,7 @@ input, textarea {
 .custom-form form {
     display: flex;
     justify-content: center;
+    margin: auto;
 }
 
 .name-city-state {
@@ -635,6 +636,36 @@ input, textarea {
     .login-form {
         padding: 5px;
         font-size: 12px;
+    }
+
+    .custom-form form {
+        width: 80%;
+        margin: auto;
+    }
+    
+    .name-city-state {
+        margin: auto;
+        font-size: 10px;
+    }
+    
+    .img-coords {
+        margin: auto;
+        font-size: 10px;
+    }
+
+    .name-city-state input {
+        width: 80%;
+        font-size: 10px;
+    }
+    
+    .img-coords input {
+        width: 80%;
+        font-size: 10px;
+    }
+
+    .buttons input {
+        width: 70px;
+        height: 30px;
     }
 
 }
