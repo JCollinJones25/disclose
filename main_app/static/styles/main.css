@@ -671,6 +671,7 @@ input, textarea {
     .buttons .btn {
         width: 70px;
         height: 30px;
+        padding: 2px;
     }
 
 }
