@@ -32,6 +32,7 @@
         <div class="auth">
           <span class="navbar-item">Welcome {{user.username}}</span>
           <a class="navbar-item" href="{% url 'logout' %}">Logout</a>
+          <a class="navbar-item" href="{% url 'profile' %}">Profile</a>
         </div>
       </div>
       {% else %}

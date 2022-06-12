@@ -458,6 +458,28 @@ input, textarea {
     color: white;
 }
 
+.profile {
+    display: flex;
+    justify-content: center;
+    text-align: left;
+    flex-direction: column;
+    background-color: #f1f1f1;
+    border: solid;
+    border-radius: 15px;
+    border-color: lightgrey;
+    border-width: 1px;
+    width: 85%;
+    height: auto;
+    min-height: 500px;
+    margin: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    padding-bottom: 25px;
+    padding-right: 25px;
+    padding-left: 25px;
+}
+
+
 
 
 /* MOBILE */
@@ -576,6 +598,19 @@ input, textarea {
     .searchbar {
         width: 85%;
         font-size: 15px;
+    }
+
+    .header strong{
+        font-size: 20px;
+        margin-left: 0;
+    }
+
+    .header .auth{
+        font-size: 10px;
+    }
+
+    .header-in {
+        margin: 0;
     }
 
 }

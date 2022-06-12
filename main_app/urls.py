@@ -18,4 +18,5 @@ urlpatterns = [
 
     # auth
     path('accounts/signup/', views.Signup.as_view(), name="signup"),
+    path('profile/', views.ProfileEditView.as_view(), name="profile"),
 ]
