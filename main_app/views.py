@@ -38,7 +38,6 @@ class LocationDetail(DetailView):
     def get_context_data(self, **kwargs):
         context = super(LocationDetail, self).get_context_data(**kwargs)
         context['comments'] = Comment.objects.filter(location_id=self.kwargs['pk'])
-        print(self.kwargs)
         return context
 
 @method_decorator(login_required, name='dispatch')
