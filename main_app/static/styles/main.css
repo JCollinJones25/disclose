@@ -668,4 +668,9 @@ input, textarea {
         height: 30px;
     }
 
+    .buttons .btn {
+        width: 70px;
+        height: 30px;
+    }
+
 }
