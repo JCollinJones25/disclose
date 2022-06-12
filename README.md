@@ -30,7 +30,7 @@ Disclose is a social media platform that caters to the 'urban explorer' crowd. I
 - AUTH ✅
 - Display location data on map ✅
 - Map markers have pop up window with location info ✅
-- Add comment model ✅
+- Comments ✅
 - Search bar ✅
 - Profile page 
 - User permissions
@@ -41,6 +41,9 @@ Disclose is a social media platform that caters to the 'urban explorer' crowd. I
 
 - Did not get around to specifying user permissions so users can only update or delete their own locations or comments.
 
+- I had an issue with getting the comments to be updated or deleted and I could not get the location pk to pass to the comment create page so the cancel button has to redirect to the home page. 
+
+- The profile page is set up but does nothave any functionality.
 
 ## Screenshots
 
