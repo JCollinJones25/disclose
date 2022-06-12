@@ -664,11 +664,9 @@ input, textarea {
     }
 
     .buttons input {
+        height: 45px;
         padding: 10px;
     }
 
-    .buttons .btn {
-        padding: 0px;
-    }
 
 }
