@@ -16,6 +16,8 @@ from django.conf import settings
 
 
 
+# Home view
+
 @method_decorator(login_required, name='dispatch')
 class Home(TemplateView):
     template_name = 'home.html'
@@ -27,10 +29,8 @@ class Home(TemplateView):
         return context
 
 
+
 # Location Views 
-
-
-
   
 @method_decorator(login_required, name='dispatch')
 class LocationDetail(DetailView):
@@ -80,7 +80,6 @@ class LocationSearch(TemplateView):
     def post(self, request, *args, **kwargs):
         if request.method == 'POST':
             searchbar = request.POST['searchbar']
-            locations = Location.objects.filter(name__icontains=searchbar)
             locations = Location.objects.filter(state__icontains=searchbar)
             return render(request, 'location_search.html', {'searchbar': searchbar, 'locations':locations})
         else:
@@ -119,6 +118,7 @@ class CommentDelete(DeleteView):
 
     def get_success_url(self):
         return reverse('location_detail', kwargs={'pk': self.object.location_id})
+
 
 
 # Signup View
