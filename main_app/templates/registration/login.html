@@ -5,7 +5,7 @@
     <div class="login-form">
       <h1 class="title">Log In</h1>
       <form method="post" action="{% url 'login' %}">
-        {% csrf_token %} {{ form.as_p }}
+        {% csrf_token %} {{form.as_p}}
         <div class="buttons">
           <input type="submit" class="btn" value="Login" />
           <input type="hidden" name="next" value="{{ next }}" />

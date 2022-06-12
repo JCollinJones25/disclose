@@ -312,6 +312,19 @@ input, textarea {
     padding-left: 25px;
 }
 
+.custom-form form {
+    display: flex;
+    justify-content: center;
+}
+
+.name-city-state {
+    margin: 10px;
+}
+
+.img-coords {
+    margin: 10px;
+}
+
 .location-img {
     width: 400px;
     max-height: 400px;
@@ -479,6 +492,9 @@ input, textarea {
     padding-left: 25px;
 }
 
+.profile input {
+    width: 35%;
+}
 
 
 
@@ -611,6 +627,11 @@ input, textarea {
 
     .header-in {
         margin: 0;
+    }
+
+    .login-form {
+        padding: 5px;
+        font-size: 12px;
     }
 
 }

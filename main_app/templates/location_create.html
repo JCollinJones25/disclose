@@ -2,9 +2,28 @@
 {% block content %}
 <div class="crud_view">
     <h1>Disclose a new location</h1>
-    <form method="post">
-        {% csrf_token %}
-        {{form.as_p}}
+    <div class="custom-form">
+        <form method="post">
+            {% csrf_token %}
+            <div class="name-city-state">
+                <p>Name:</p>
+                {{form.name}}
+                <p>City:</p>
+                {{form.city}}
+                <p>State:</p>
+                {{form.state}}
+            </div>
+            <div class="img-coords">
+                <p>Image (URL):</p>
+                {{form.img}}
+                <p>Latitude (+/-):</p>
+                {{form.lat}}
+                <p>Longitude (+/-):</p>
+                {{form.lng}}
+            </div>
+        </div>
+        <p>Description:</p>
+        {{form.description}}
         <div class="buttons">
             <input class='btn' type="submit" value="Submit" />
             <a class='btn' id='btn-link' href="{% url 'home' %}">Cancel</a>
