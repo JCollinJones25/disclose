@@ -10,6 +10,9 @@ rgb(50, 50, 50)
 accent grey
 #f1f1f1
 
+subtle color
+#F7F8FB
+
 */
 
 /* GLOBAL */
@@ -55,6 +58,7 @@ input, textarea {
     font-size: 15px;
     border-width: 1px;
     border-color: lightgrey;
+    background-color: rgb(241, 241, 241, 0.5);
 }
 
 .header strong {
@@ -188,7 +192,7 @@ input, textarea {
 }
 
 .searchbar {
-    background-color: white;
+    background-color: #F7F8FB;
     border-radius: 5px;
     width: 300px;
     padding: 5px;
@@ -237,9 +241,16 @@ input, textarea {
     padding: 3px;
 }
 
-.list-item {
+.list-link {
     color: #5fa7ef;
     font-size: 15px;
+}
+
+.list-item {
+    border-bottom: solid;
+    border-color: lightgrey;
+    border-width: 1px;
+    font-size: 11px;
 }
 
 
@@ -303,10 +314,10 @@ input, textarea {
     text-align: center;
     flex-direction: column;
     background-color: #f1f1f1;
-    border-color: lightgrey;
-    border-width: 1px;
     border: solid;
     border-radius: 15px;
+    border-color: lightgrey;
+    border-width: 1px;
     width: 85%;
     height: auto;
     min-height: 500px;
@@ -328,6 +339,8 @@ input, textarea {
     margin: auto;
     border: solid;
     border-radius: 15px;
+    border-color: lightgrey;
+    border-width: 1px;
 }
 
 .green-btn {
@@ -361,12 +374,13 @@ input, textarea {
     flex-direction: column;
     margin: auto;
     background-color: #f1f1f1;
+    border: solid;
+    border-radius: 15px;
     border-color: lightgrey;
+    border-width: 1px;
     width: 90%;
     height: 300px;
     padding: 10px;
-    border: solid;
-    border-radius: 15px;
     margin-bottom: 20px;
 }
 

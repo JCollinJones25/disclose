@@ -15,15 +15,16 @@
   <div class="location-list">
     <div class="list">
       {% for location in locations %}
-        <a class="list-item" href="/locations/{{location.id}}">
+      <div class="list-item">
+        <a class="list-link" href="/locations/{{location.id}}">
           <div class="name">
             <h3>{{location.name}}</h3>
           </div>
         </a>
-          <div class="city-state"><p>{{location.city}}, {{location.state}}</p></div>
-          <div class="lat">{{location.lat}}</div>
-          <div class="lng">{{location.lng}}</div>
-          <hr />
+        <div class="city-state"><p>{{location.city}}, {{location.state}}</p></div>
+        <div class="lat">{{location.lat}}</div>
+        <div class="lng">{{location.lng}}</div>
+      </div>
       {% endfor %}
     </div>
   </div>
