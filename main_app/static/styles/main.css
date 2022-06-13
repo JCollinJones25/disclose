@@ -570,6 +570,7 @@ input, textarea {
         margin: 0;
         margin-top: 10%;
         max-height: 500px;
+        font-size: 15px;
     }
     
     .location-img {
@@ -638,6 +639,11 @@ input, textarea {
         font-size: 12px;
     }
 
+    .signup-form {
+        padding: 10px;
+        font-size: 12px;
+    }
+
     .custom-form form {
         width: 80%;
         margin: auto;
@@ -667,6 +673,8 @@ input, textarea {
         height: 35px;
         padding: 10px;
     }
+
+
 
 
 }
