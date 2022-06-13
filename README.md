@@ -19,7 +19,7 @@ Disclose is a social media platform that caters to the 'urban explorer' crowd. I
 ![wireframe](https://github.com/JCollinJones25/disclose/blob/main/images/wireframe.png?raw=true)
 
 ## ERD
-![ERD](https://github.com/JCollinJones25/disclose/blob/main/images/ERD.png?raw=true)
+![ERD](https://github.com/JCollinJones25/disclose/blob/main/main_app/static/images/ERD.png?raw=true)
 
 ## MVP Goals ✅
 - CRUD functionality with PostgresQL database
@@ -47,10 +47,10 @@ Disclose is a social media platform that caters to the 'urban explorer' crowd. I
 
 ## Screenshots
 
-![login](https://github.com/JCollinJones25/disclose/blob/main/images/login.png)
-![home](https://github.com/JCollinJones25/disclose/blob/main/images/home.png)
-![location](https://github.com/JCollinJones25/disclose/blob/main/images/location.png)
-![comment-section](https://github.com/JCollinJones25/disclose/blob/main/images/comment-section.png)
-![comment](https://github.com/JCollinJones25/disclose/blob/main/images/comment.png)
-![search](https://github.com/JCollinJones25/disclose/blob/main/images/search.png)
-![create](https://github.com/JCollinJones25/disclose/blob/main/images/create.png)
+![login](https://github.com/JCollinJones25/disclose/blob/main/main_app/static/images/login.png)
+![home](https://github.com/JCollinJones25/disclose/blob/main/main_app/static/images/home.png)
+![location](https://github.com/JCollinJones25/disclose/blob/main/main_app/static/images/location.png)
+![comment-section](https://github.com/JCollinJones25/disclose/blob/main/main_app/static/images/comment-section.png)
+![comment](https://github.com/JCollinJones25/disclose/blob/main/main_app/static/images/comment.png)
+![search](https://github.com/JCollinJones25/disclose/blob/main/main_app/static/images/search.png)
+![create](https://github.com/JCollinJones25/disclose/blob/main/main_app/static/images/create.png)
