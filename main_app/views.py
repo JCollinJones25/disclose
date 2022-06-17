@@ -94,6 +94,7 @@ class CommentCreate(CreateView):
 
     def form_valid(self, form):
         form.instance.location_id = self.kwargs['pk']
+        form.instance.user = self.request.user
         return super(CommentCreate, self).form_valid(form)
     
     def get_success_url(self):
