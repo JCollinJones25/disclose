@@ -16,7 +16,7 @@ Disclose is a social media platform that caters to the 'urban explorer' crowd. I
 - As a user I want to be able to comment on other users posts.
 
 ## Wireframe
-![wireframe](https://github.com/JCollinJones25/disclose/blob/main/images/wireframe.png?raw=true)
+![wireframe](https://github.com/JCollinJones25/disclose/blob/main/main_app/static/images/wireframe.png?raw=true)
 
 ## ERD
 ![ERD](https://github.com/JCollinJones25/disclose/blob/main/main_app/static/images/ERD.png?raw=true)
