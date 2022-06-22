@@ -249,8 +249,8 @@ input, textarea {
 
 .searchpage {
     margin: 20px;
-    bottom: 20px;
     color: grey;
+    min-height: 100%;
 }
 
 .searchlist {
