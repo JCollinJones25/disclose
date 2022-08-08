@@ -514,7 +514,7 @@ input, textarea {
 @media only screen and (max-height: 530px) and (min-width: 400px) {
     .login-form {
         height: auto;
-        width: 30vw;
+        width: 50vw;
         font-size: 12px;
         padding: 10px;
         margin-top: 10px;
