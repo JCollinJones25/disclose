@@ -467,8 +467,8 @@ input, textarea {
     background-color: rgb(95, 167, 239, 0.8);
     padding: 5%;
     z-index: 1;
-    max-width: 400px;
-    max-height: 500px;
+    max-width: 50%;
+    max-height: 75%;
     margin-top: 5%;
     margin-right: 10%;
 }
