@@ -1,0 +1,14 @@
+# fly.toml file generated for disclose on 2023-04-13T16:26:49-04:00
+
+app = "disclose"
+primary_region = "bos"
+
+[deploy]
+  release_command = "python manage.py migrate"
+
+[env]
+  PORT = "8000"
+
+[[statics]]
+  guest_path = "/code/static"
+  url_prefix = "/static/"
