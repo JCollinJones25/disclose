@@ -10,7 +10,8 @@ RUN mkdir -p /code
 WORKDIR /code
 
 RUN pip install pipenv
-COPY Pipfile Pipfile.lock /code/
+COPY Pipfile /code/
+# Pipfile.lock /code/
 RUN pipenv install --deploy --system
 
 COPY . /code
